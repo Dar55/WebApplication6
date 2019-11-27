@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=@ViewBag.Description />
+    <meta name="keywords" content="стилист, имиджмейкер, собственный стиль, стилист на Кипре, онлайн услуги стилиста" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <header>
+        <div class="center-block-main">
+            <a href='@Url.Action("Index", "Home")' class="logo"><img src="../../img/logo.jpg" alt="Услуги стилиста имиджмейкера на Кипре"></a>
+            <nav>
+                <ul class="menu">
+                    <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Мои услуги", "Services", "Home")</li>
+                    <li>@Html.ActionLink("Обо мне", "About", "Home")</li>
+                    <li>@Html.ActionLink("Личный блог", "Blogs", "Home")</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    @RenderBody()
+
+
+    <div class="clr"></div>
+    <div class="pager clearfix">
+        <p class="previous-link">&larr; <a href="#">Previous</a></p>
+        <p class="next-link"> <a href="#">Next</a>&rarr;</p>
+        <div class="pagesfoot">
+            <a href="whatsapp://send?text=Hello&phone=+79169271003&abid=+79169271003"><img src="../../img/whichapplication.ico" alt="WhatsApp" /> </a>
+            <a href="https://www.instagram.com/makestyle_notfashion/"><img src="../../img/insta.ico" alt="Instagram" /> </a>
+            <a href="mailto:info@makestyles.ru"><img src="../../img/email.ico" alt="E-mail" /> </a>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="center-block-main">
+            <p> &copy; 2019 makestyles.ru - all right reserved. <a href="mailto:webmaster@makestyles.ru">webmaster@makestyles.ru</a></p>
+        </div>
+        <div>
+            <!--LiveInternet counter-->
+            <script type="text/javascript">
+                document.write('<a href="//www.liveinternet.ru/click" ' +
+                    'target="_blank"><img src="//counter.yadro.ru/hit?t44.6;r' +
+                    escape(document.referrer) + ((typeof (screen) == 'undefined') ? '' :
+                        ';s' + screen.width + '*' + screen.height + '*' + (screen.colorDepth ?
+                            screen.colorDepth : screen.pixelDepth)) + ';u' + escape(document.URL) +
+                    ';h' + escape(document.title.substring(0, 150)) + ';' + Math.random() +
+                    '" alt="" title="LiveInternet" ' +
+                    'border="0" width="31" height="31"><\/a>')
+            </script><!--/LiveInternet-->
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+                (function (m, e, t, r, i, k, a) {
+                    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                    m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+                })
+                (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(56272690, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true
+            });
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/56272690" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153399109-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-153399109-1');
+            </script>
+
+        </div>
+
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+    </html>

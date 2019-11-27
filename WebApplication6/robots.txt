@@ -1,0 +1,20 @@
+﻿User-agent: *
+Disallow:/cache/
+Disallow: /administrator/
+Disallow: /bin/
+
+User-agent: GoogleBot
+Disallow:/cache/
+Disallow: /administrator/
+Disallow: /bin/
+Allow: /*/*.js   
+Allow: /*/*.css
+
+User-agent: Yandex
+Disallow:/cache/
+Disallow: /administrator/
+Disallow: /bin/
+Allow: /*/*.js   
+Allow: /*/*.css
+
+Sitemap: https://makestyles.ru/sitemaps.xml

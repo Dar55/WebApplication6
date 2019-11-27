@@ -1,0 +1,41 @@
+﻿@model WebApplication6.Models.GuestResponse
+
+<div class="center-block-main content">
+    <main>
+        <article>
+            <header></header>
+                @{
+                    int s = 0;
+                    try
+                    {
+                        WebMail.SmtpServer = "makestyles.ru";
+                        WebMail.SmtpPort = 25;
+                        WebMail.EnableSsl = false;
+                        WebMail.UserName = "info@makestyles.ru";
+                        WebMail.Password = "a_eB45s3";
+                        WebMail.From = "info@makestyles.ru";
+                        WebMail.Send("dar55@yandex.ru", "RSVP Notification",
+                        "Имя Клиента:  " + Model.Name + "                  Email:  " + Model.Email + "         Номер телефона:" + Model.Phone
+                        + "         Услуга:" + Model.WillAttend + "         Тип услуги:" + Model.Online
+                        );
+                    }
+                    catch (Exception)
+                    {
+                        @:Приносим извинения, но сообщенме отправлено не было, @Html.ActionLink("попробуйте еще раз.", "RsvpForm")
+                        s = 1;
+                    }
+                }
+                <div>
+                    @if (s == 0)
+                    {
+
+                        <h1> Спасибо, @Model.Name!</h1>
+                        @:<p>Сообщение успешно отправлено!В ближайшее время мы с вами свяжемся.</p>
+                    }
+                </div>
+            <br /><br /><br /><br /><br />
+            <p>@Html.ActionLink("Вернуться на главную страницу", "Index", "Home", null, new { @class = "my-class1" })</p>
+        </article>
+
+    </main>
+</div>
