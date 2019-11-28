@@ -79,6 +79,7 @@ namespace WebApplication6.Controllers
         }
         public ActionResult Blogs()
         {
+            ViewBag.Title = "Блог о стиле и моде";
             return View();
         }
         public ActionResult Travel_Bagage()
@@ -90,6 +91,19 @@ namespace WebApplication6.Controllers
             return View();
         }
         public ActionResult Read_Coco()
+        {
+            return View();
+        }
+        public ActionResult Hystory_mode()
+        {
+            return View();
+        }
+        public ActionResult Shoes_men()
+        {
+            return View();
+        }
+
+        public ActionResult Dramma_style()
         {
             return View();
         }

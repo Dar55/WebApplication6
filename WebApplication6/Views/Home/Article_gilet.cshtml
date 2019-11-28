@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Статья о том, что модно, а что нет";
+﻿@model WebApplication6.Models.Comments
+
+@{
+    ViewBag.Title = "Тренды в моде";
     ViewBag.Description = "Размышления на тему современных направлений в определени, что есть можно, а что нет";
 }
 <div class="center-block-main content">
@@ -36,7 +38,12 @@
                 ⠀<br>
                 В слайдере примеры современной стилизации и то, как носить уже не надо.
             </p>
+
+
+            @Html.TextAreaFor(x => x.Comment, new { @class = "my-class3" })
             <p>@Html.ActionLink("Back...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <p>@Html.ActionLink("Комментировать", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+
         </article>
     </main>
 

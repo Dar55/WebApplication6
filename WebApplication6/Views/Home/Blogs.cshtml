@@ -1,10 +1,48 @@
 ﻿@{
-    ViewBag.Title = "Блог о стиле и моде";
     ViewBag.Description = "Блог стилиста-имиджмейкера о стиле, моде, истории моды, новых веяниях в исскустве одеваться";
 }
 
 <div class="center-block-main content">
+    <main>
+        <article class="blogs_1">
+            <header>
+                <img src="../../img/dramma_style_1.jpg" alt="Стиль Драма в одежде" class="blogs">
+            </header>
+            <h2 class="blogs">ДРАМАТИЧЕСКИЙ СТИЛЬ</h2>
+            <p>
+                Кому подойдет драматический стиль?
+            </p>
+            <p>
+                Драма ассоциируется у нас с бурей эмоций, накалом страстей, сексуальностью, театральностью, артистичностью и царственностью.
+                Поэтому, если говорить о внешности, то...
+            </p>
+            <p>@Html.ActionLink("Continue Reading", "Dramma_style", "Home", null, new { @class = "my-class1" })</p>
+        </article>
+        <article class="blogs_1">
+            <header>
+                <img src="../../img/history_mode_1.jpg" alt="Откуда берутся тренды" class="blogs">
+            </header>
+            <h2 class="blogs">ОТКУДА БЕРУТСЯ ТРЕНДЫ</h2>
+            <p>
+                Каждую весну и осень дизайнеры представляют новые коллекции и показывают, что будет
+                модно в следующем сезоне. Но как дизайнерам приходит в голову показать именно это? И
+                почему несколько модельеров показывают одновременно практически одинаковые вещи?
+            </p>
+            <p>@Html.ActionLink("Continue Reading", "Hystory_mode", "Home", null, new { @class = "my-class1" })</p>
+        </article>
+        <article class="blogs_1">
+            <header>
+                <img src="../../img/men_shoes_1.jpg" alt="Виды обуви" class="blogs">
+            </header>
+            <h2 class="blogs">ВИДЫ МУЖСКОЙ ОБУВИ</h2>
+             <p>
+                Как и обещала, рассказываю, точнее показываю, виды мужской обуви и их сочетание с брюками.
+                Не буду настаивать на строгих вариантах сочетаний, тем более сейчас границы существенно расширились, особенно в рамках кэжуал стиля...
+            </p>
+            <p>@Html.ActionLink("Continue Reading", "Shoes_men", "Home", null, new { @class = "my-class1" })</p>
+        </article>
 
+    </main>
     <main>
         <article class="blogs_1">
             <header>

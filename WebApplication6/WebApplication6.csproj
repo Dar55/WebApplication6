@@ -142,6 +142,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\GuestResponse.cs" />
     <Compile Include="TakeData.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -152,7 +153,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
+    <Content Include="img\dramma_style_1.jpg" />
+    <Content Include="img\dramma_style_2.jpg" />
+    <Content Include="img\dramma_style_3.jpg" />
+    <Content Include="img\dramma_style_4.jpg" />
+    <Content Include="img\dramma_style_5.jpg" />
+    <Content Include="img\dramma_style_6.jpg" />
+    <Content Include="img\history_mode_1.jpg" />
     <Content Include="img\marker.png" />
+    <Content Include="img\men_shoes_1.jpg" />
+    <Content Include="img\men_shoes_2.jpg" />
+    <Content Include="img\men_shoes_3.jpg" />
+    <Content Include="img\men_shoes_4.jpg" />
+    <Content Include="img\men_shoes_5.jpg" />
+    <Content Include="img\men_shoes_6.jpg" />
+    <Content Include="img\men_shoes_7.jpg" />
+    <Content Include="img\men_shoes_8.jpg" />
     <Content Include="img\model.png" />
     <Content Include="email.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -267,6 +283,9 @@
     <Content Include="Views\Home\Black_Friday.cshtml" />
     <Content Include="Views\Home\RsvpForm.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
+    <Content Include="Views\Home\Hystory_mode.cshtml" />
+    <Content Include="Views\Home\Dramma_style.cshtml" />
+    <Content Include="Views\Home\Shoes_men.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
