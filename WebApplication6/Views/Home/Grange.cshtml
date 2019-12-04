@@ -2,17 +2,55 @@
     ViewBag.Title = "Стиль Гранж";
     ViewBag.Description = "Статья о стиле Гранж, одном из стилей протестных движений";
 }
+
 <div class="center-block-main content">
     <main>
         <article>
-            <header class=" fadein_5">
-                <img src="../../img/grange_1.jpg" alt="Стиль Гранж">
-                <img class="next_5" src="../../img/grange_1.jpg" alt="Стиль Гранж">
-                <img class="next_5" src="../../img/grange_2.jpg" alt="Варианты в стиле Гранж">
-                <img class="next_5" src="../../img/grange_3.jpg" alt="Варианты в стиле Гранж">
-                <img class="next_5" src="../../img/grange_4.jpg" alt="Гранж">
-                <img class="next_5" src="../../img/grange_5.jpg" alt="Стиль Гранж">
+
+            <header>
+                <div id="container">
+                    <div id="img_container">
+                        <div id="imgthumb_box">
+                            <a href="" class="thumblink" id="imglink1"><img src="../../thumb/Grange_5.jpg"/></a>
+                            <a href="" class="thumblink" id="imglink2"><img src="../../thumb/Grange_1.jpg" /></a>
+                            <a href="" class="thumblink" id="imglink3"><img src="../../thumb/Grange_2.jpg" /></a>
+                            <a href="" class="thumblink" id="imglink4"><img src="../../thumb/Grange_3.jpg" /></a>
+                            <a href="" class="thumblink" id="imglink5"><img src="../../thumb/Grange_4.jpg" /></a>
+                        </div>
+                        <div id="img_box">
+                            <img id="img1" src="../../img/grange_5.jpg" alt="Стиль Гранж">
+                            <img id="img2" src="../../img/grange_1.jpg" alt="Варианты в стиле Гранж">
+                            <img id="img3" src="../../img/grange_2.jpg" alt="Варианты в стиле Гранж">
+                            <img id="img4" src="../../img/grange_3.jpg" alt="Гранж">
+                            <img id="img5" src="../../img/grange_4.jpg" alt="Стиль Гранж">
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div id="navigate">
+                        <a href="" id="linkprev">
+                            <svg width="2px" height="1px" viewBox="0 0 2 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                                    <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                    <polygon class="arrow-6-pl-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                    <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="" id="linknext">
+                            <svg width="2px" height="1px" viewBox="-1 0 2 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                    <polygon class="arrow-6-pl-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                    <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </header>
+
+
+
             <h2>СТИЛЬ ГРАНЖ.</h2>
             <p>
                 <i><time pubdate datetime="2019-07-18">Дата публикации: 18 июля 2019</time></i>
@@ -30,7 +68,7 @@
             <p>Детали – заклепки, шипы, грубая обувь, шнуровка, сетка, массивные украшения.</p>
             <p>Ключевые вещи – шорты, рваные джинсы, косуха, футболки с надписями и портретами музыкантов, кожаные брюки, массивные ботинки, клетчатая рубашка, джинсовая куртка, цепи.</p>
             <p>Кстати, Гранж – это один из трендов сезона осень/зима 19, в сториз вдохновляемся образами с показов.</p>
-            <p>@Html.ActionLink("Back...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
         </article>
     </main>
 

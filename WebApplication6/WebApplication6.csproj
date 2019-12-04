@@ -233,11 +233,25 @@
     <Content Include="img\viber_phone.ico" />
     <Content Include="img\whichapplication.ico" />
     <Content Include="insta.ico" />
+    <Content Include="Scripts\script_blog.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="thumb\article_gilet_1.jpg" />
+    <Content Include="thumb\article_gilet_2.jpg" />
+    <Content Include="thumb\article_gilet_3.jpg" />
+    <Content Include="thumb\article_gilet_4.jpg" />
+    <Content Include="thumb\article_gilet_5.jpg" />
+    <Content Include="thumb\article_gilet_6.jpg" />
+    <Content Include="thumb\article_gilet_7.jpg" />
+    <Content Include="thumb\article_gilet_8.jpg" />
+    <Content Include="thumb\Grange_1.jpg" />
+    <Content Include="thumb\Grange_2.jpg" />
+    <Content Include="thumb\Grange_3.jpg" />
+    <Content Include="thumb\Grange_4.jpg" />
+    <Content Include="thumb\Grange_5.jpg" />
     <Content Include="whichapplication.ico" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

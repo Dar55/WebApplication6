@@ -195,7 +195,7 @@ div.center-block-main > img {
 main {
     float: left;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 .promo {
@@ -381,6 +381,122 @@ li {
     list-style-position: inside;
 }
 
+#navigate {
+    text-align: center;
+    margin: 10px;
+    position: relative;
+}
+
+
+    #navigate a:hover {
+        color: #d3d3d3;
+    }
+
+    #navigate span {
+        display: none;
+        color: #999;
+    }
+
+#img_container {
+    overflow: hidden;
+    width: 680px;
+    margin: 0 auto;
+}
+
+
+#img_box {
+    position: relative;
+    width: 7000px;
+    margin: 0;
+}
+
+    #img_box img {
+        float: left;
+        height: 680px;
+    }
+
+#imgthumb_box {
+    text-align: center;
+}
+
+    #imgthumb_box a {
+        margin-left: 4px;
+    }
+
+        #imgthumb_box a img {
+            border: 6px solid #e3e3e3;
+            position: relative;
+            top: 10px;
+            -webkit-border-radius: .3em;
+            -moz-border-radius: .3em;
+            border-radius: .3em;
+        }
+
+            #imgthumb_box a img:hover {
+                border-color: #666;
+            }
+
+svg {
+    width: 50px;
+    height: auto;
+    margin: 0 2rem;
+    cursor: pointer;
+    overflow: visible;
+    z-index: 100;
+}
+
+
+    svg polygon,
+    svg path {
+        transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+        fill: #337AB7;
+    }
+
+    svg:hover polygon,
+    svg:hover path {
+        transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+        fill: #000;
+    }
+
+    svg:hover .arrow-6-pl {
+        animation: arrow-6-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+    }
+
+    svg:hover .arrow-6-pl-fixed {
+        animation: arrow-6-fixed-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+    }
+
+@keyframes arrow-6-anim {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    5% {
+        transform: translateX(-0.1rem);
+    }
+
+    100% {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+}
+
+@keyframes arrow-6-fixed-anim {
+    5% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 @media screen and (max-width:768px) {
     .logo {
@@ -396,11 +512,6 @@ li {
         width: 100%;
         margin-top: 30px;
     }
-
-    article > header img {
-        width: 100%;
-    }
-
 
     article.blogs_1 {
         float: none;
@@ -435,16 +546,26 @@ li {
         float: none;
         width: 30%;
     }
+
     .boom {
         height: 100%;
     }
+
+
+    #img_container {
+        width: 580px;
+    }
+    #imgthumb_box{
+        display:none;
+    }
+    #img_box img {
+        height: 580px;
+    }
+
+
 }
 
-    aside {
-        float: none;
-        width: 100%;
-        margin-top: 70px;
-    }
+
 
 
 
@@ -463,6 +584,13 @@ li {
             .menu li a {
                 padding: 10px 35px;
             }
+        #img_container {
+            width: 420px;
+        }
+
+        #img_box img {
+            height: 420px;
+        }
     }
 
  
