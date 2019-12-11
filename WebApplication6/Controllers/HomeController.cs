@@ -6,10 +6,14 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication6.Models;
 
+
 namespace WebApplication6.Controllers
 {
+    
     public class HomeController : Controller
     {
+        List<Article> articles;
+        const int pageSize = 9;
         public ActionResult Index()
         {
 
@@ -69,34 +73,83 @@ namespace WebApplication6.Controllers
         {
             return View();
         }
-        public ActionResult Blogs()
+        public ActionResult Blogs(int? id)
+        {
+            int page = id ?? 0;
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("Blog1part", GetItemsPage(page));
+            }
+            return View(GetItemsPage(0));
+        }
+        public HomeController()
         {
             ViewBag.Title = "Блог о стиле и моде";
             string connectionString = "Data Source=wpl23.hosting.reg.ru;Initial Catalog=u0825580_12;User Id = u0825580_hos; Password = F#edj106";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            ViewBag.MyID = new string[16];
-            ViewBag.MyName = new string[16];
-            ViewBag.MyImg = new string[16];
-            ViewBag.MyHtml = new string[16];
-            ViewBag.MyAction = new string[16];
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connection;
-            cmd.CommandText = "Select top 15 * from [dbo].[table_content] order by id desc ";
+            cmd.CommandText = "Select * from [dbo].[table_content] order by id desc ";
             SqlDataReader rdr = cmd.ExecuteReader();
-            int i = 0;
+            articles = new List<Article>();
             while (rdr.Read())
             {
-                ViewBag.MyID[i] = rdr["id"].ToString();
-                ViewBag.MyName[i] = rdr["name"].ToString();
-                ViewBag.MyImg[i] = rdr["img_code"].ToString();
-                ViewBag.MyHtml[i] = rdr["html_code"].ToString();
-                ViewBag.MyAction[i] = rdr["action_code"].ToString();
-                i++;
+               articles.Add(
+                    new Article { MyId = Convert.ToInt32(rdr["id"].ToString()), MyImg = rdr["img_code"].ToString(), MyName = rdr["name"].ToString(), MyHtml = rdr["html_code"].ToString(), MyAction = rdr["action_code"].ToString() });
             }
-            return View();
+        }
+
+        private List<Article> GetItemsPage(int page = 1)
+        {
+            var itemsToSkip = page * pageSize;
+            return articles.OrderByDescending(t => t.MyId).Skip(itemsToSkip).
+                Take(pageSize).ToList();
         }
         public ActionResult Travel_Bagage()
+        {
+            return View();
+        }
+        public ActionResult Style_Safari()
+        {
+            return View();
+        }
+        public ActionResult Bomber()
+        {
+            return View();
+        }
+        public ActionResult Kristoal_balensiaga()
+        {
+            return View();
+        }
+        public ActionResult Serials()
+        {
+            return View();
+        }
+        public ActionResult Change_Jeans()
+        {
+            return View();
+        }
+        
+
+        public ActionResult Shirt()
+        {
+            return View();
+        }
+        
+        public ActionResult Nechego_nadet()
+        {
+            return View();
+        }
+        public ActionResult Ties()
+        {
+            return View();
+        }
+        public ActionResult Sitemap()
+        {
+            return View();
+        }
+        public ActionResult Style_Military()
         {
             return View();
         }

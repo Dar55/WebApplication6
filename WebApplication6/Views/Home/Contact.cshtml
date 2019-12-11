@@ -1,23 +1,129 @@
-﻿@{
+﻿@model WebApplication6.Models.GuestResponse
+@{
     ViewBag.Title = "Как меня найти";
     ViewBag.Description = "Контакты стилиста - имиджмейкера, проживающего на Кипре Ростовой Екатерины";
 }
 
+<style>
+    .line {
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 100px;
+        position: relative;
+    }
+
+        .line span {
+            background-color: #ffffff;
+            position: relative;
+            z-index: 1;
+            padding: 0px 25px;
+            margin-left: 150px;
+        }
+
+        .line:after {
+            content: '';
+            display: block;
+            padding-top: 0px;
+            width: 100%;
+            height: 5px;
+            background-color: gray;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            z-index: 0;
+        }
+
+    .cont1 {
+        position: relative;
+    }
+
+    .cont {
+        float: left;
+        width: 40%;
+    }
+
+    .cont2 {
+        float: left;
+        width: 15%;
+        height: 100px;
+    }
+
+    .zagolovok3 {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .imgcontact {
+        width: 50px;
+        padding-left: 30px;
+    }
+</style>
+
+<p class="line"><span>КОНТАКТЫ</span></p>
+
 <div class="center-block-main content">
     <main>
-        <article>
-            <address>
-                Город Лимассол<br />
-                Кипр<br />
-                <abbr title="Телефон">тел:</abbr>
-                +3579657243<br />
-            </address>
-
-            <address>
-                <strong>Инстаграм:</strong> <a href="https://www.instagram.com/makestyle_notfashion/">Моя страница</a><br />
-                <strong>Почта для связи:</strong> <a href="mailto:info@makestyles.ru">info@makestyles.ru</a><br />
-            </address>
-        </article>
+        <div class="cont1">
+            <div class="cont">
+                <h3 class="zagolovok3">АДРЕС:</h3>
+                <address>
+                    <b>Город:</b> Лимассол<br />
+                    <b>Страна:</b> Кипр<br /><br /><br />
+                </address>
+                <h3 class="zagolovok3">КОНТАКТЫ ДЛЯ СВЯЗИ:</h3>
+                <abbr title="Телефон"><b>ТЕЛЕФОН:</b></abbr> +35796557243<br />
+                <strong>EMAIL:</strong> <a href="mailto:info@makestyles.ru">info@makestyles.ru</a><br />
+            </div>
+            <div class="cont2"></div>
+            <div class="cont">
+                <h3 class="zagolovok3">Я В СОЦСЕТЯХ:</h3>
+                <address>
+                    <a href="whatsapp://send?text=Hello&phone=+79169271003&abid=+79169271003"><img src="../../img/whichapplication.ico" class="imgcontact" alt="WhatsApp" /> </a>
+                    <a href="https://www.instagram.com/makestyle_notfashion/"><img src="../../img/insta.ico" class="imgcontact" alt="Instagram" /> </a>
+                    <a href="https://www.facebook.com/Katerina-Rostova-1550039201793595/"><img src="../../img/social_facebook.ico" class="imgcontact" alt="Facebook" /> </a>
+                </address>
+            </div>
+        </div>
     </main>
+    <main>
+        <article>
 
-</div>
+            <h3 class="zagolovok3">ФОРМА ДЛЯ СВЯЗИ</h3>
+            <p>Если вы хотите чтобы с вами связались заполните форму идущую ниже и я с вами свяжусь.</p>
+            <p>
+                @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+        <p>Ваше имя:<br /> @Html.TextBoxFor(x => x.Name) </p>
+
+        <p>
+            Электронная почта:<br />@Html.TextBoxFor(x => x.Email)
+        </p>
+        <p>Номер телефона:<br />@Html.TextBoxFor(x => x.Phone)</p>
+
+        <p>
+            Услуга:<br /> @Html.DropDownListFor(x => x.WillAttend, new[] {
+new SelectListItem() {Text = "Разбор гардероба", Value =
+"1"},
+new SelectListItem() {Text = "Шоппинг", Value =
+"2"},
+new SelectListItem() {Text = "Создание капсулы", Value =
+"3"},
+new SelectListItem() {Text = "Журнал стиля", Value = "4"},
+new SelectListItem() {Text = "Стилизация фотосессий", Value = "5"}
+},
+"Выберите опцию")
+        </p>
+        <p>
+            Тип услуги:<br /> @Html.DropDownListFor(x => x.Online, new[] {
+new SelectListItem() {Text = "Онлайн", Value =bool.TrueString},
+new SelectListItem() {Text = "Личное присутствие", Value =bool.FalseString},
+},
+"Выберите опцию")
+        </p>
+        <p>Дополнительные пожелания:<br />@Html.TextAreaFor(x => x.Texts, 5, 26, new { })</p><br /><br /><br />
+        <input type="submit" value="Отправить" />
+}
+            </article>
+        </main>
+    </div>

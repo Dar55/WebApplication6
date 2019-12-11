@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="../../Scripts/script_blog.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://makestyles.ru/Scripts/script_blog.js"></script>
 </head>
 <body>
 
@@ -31,11 +31,9 @@
     </header>
     @RenderBody()
 
-
+    
     <div class="clr"></div>
     <div class="pager clearfix">
-        <p class="previous-link">&larr; <a href="#">Previous</a></p>
-        <p class="next-link"> <a href="#">Next</a>&rarr;</p>
         <div class="pagesfoot">
             <a href="whatsapp://send?text=Hello&phone=+79169271003&abid=+79169271003"><img src="../../img/whichapplication.ico" alt="WhatsApp" /> </a>
             <a href="https://www.instagram.com/makestyle_notfashion/"><img src="../../img/insta.ico" alt="Instagram" /> </a>
@@ -87,7 +85,7 @@
             </script>
 
         </div>
-
+        @Html.ActionLink("Карта сайта", "Sitemap", "Home")
     </footer>
 
 

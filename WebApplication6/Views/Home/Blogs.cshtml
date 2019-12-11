@@ -2,146 +2,51 @@
     ViewBag.Description = "Блог стилиста-имиджмейкера о стиле, моде, истории моды, новых веяниях в исскустве одеваться";
 }
 
+<script>
+    $(function () {
+
+        $('div#loading').hide();
+
+        var page = 0;
+        var _inCallback = false;
+        function loadItems() {
+            if (page > -1 && !_inCallback) {
+                _inCallback = true;
+                page++;
+                $('div#loading').show();
+                $.ajax({
+                    type: 'GET',
+                    url: '/Home/Blogs/' + page,
+
+                    success: function (data, textstatus) {
+                        if (page < 6) {
+                            $("#scrolList").append(data);
+                        }
+                        else {
+                            page = -1;
+                        }
+                        _inCallback = false;
+                        $("div#loading").hide();
+                    }
+                });
+            }
+        }
+        // обработка события скроллинга
+        $(window).scroll(function () {
+            if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+
+                loadItems();
+            }
+        });
+    })
+</script>
 <div class="center-block-main content">
-    <main>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[0])
-            </header>
-            <h2 class="blogs"> @Html.Raw(ViewBag.MyName[0])</h2>
-            @Html.Raw(ViewBag.MyHtml[0])
-            <p><a href=@ViewBag.MyAction[0] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[1])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[1])</h2>
-            @Html.Raw(ViewBag.MyHtml[1])
-            <p><a href=@ViewBag.MyAction[1] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[2])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[2])</h2>
-            @Html.Raw(ViewBag.MyHtml[2])
-            <p><a href=@ViewBag.MyAction[2] class="my-class1">Читать полностью</a></p>
-        </article>
-
-    </main>
-    <main>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[3])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[3])</h2>
-            @Html.Raw(ViewBag.MyHtml[3])
-            <p><a href=@ViewBag.MyAction[3] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[4])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[4])</h2>
-            @Html.Raw(ViewBag.MyHtml[4])
-            <p><a href=@ViewBag.MyAction[4] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[5])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[5])</h2>
-            @Html.Raw(ViewBag.MyHtml[5])
-            <p><a href=@ViewBag.MyAction[5] class="my-class1">Читать полностью</a></p>
-        </article>
-
-    </main>
-
-    <main>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[6])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[6])</h2>
-            @Html.Raw(ViewBag.MyHtml[6])
-            <p><a href=@ViewBag.MyAction[6] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[7])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[7])</h2>
-            @Html.Raw(ViewBag.MyHtml[7])
-            <p><a href=@ViewBag.MyAction[7] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[8])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[8])</h2>
-            @Html.Raw(ViewBag.MyHtml[8])
-            <p><a href=@ViewBag.MyAction[8] class="my-class1">Читать полностью</a></p>
-        </article>
-
-    </main>
-
-    <main>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[9])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[9])</h2>
-            @Html.Raw(ViewBag.MyHtml[9])
-            <p><a href=@ViewBag.MyAction[9] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[10])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[10])</h2>
-            @Html.Raw(ViewBag.MyHtml[10])
-            <p><a href=@ViewBag.MyAction[10] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[11])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[11])</h2>
-            @Html.Raw(ViewBag.MyHtml[11])
-            <p><a href=@ViewBag.MyAction[11] class="my-class1">Читать полностью</a></p>
-        </article>
-
-    </main>
-
-
-    <main>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[12])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[12])</h2>
-            @Html.Raw(ViewBag.MyHtml[12])
-            <p><a href=@ViewBag.MyAction[12] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[13])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[13])</h2>
-            @Html.Raw(ViewBag.MyHtml[13])
-            <p><a href=@ViewBag.MyAction[13] class="my-class1">Читать полностью</a></p>
-        </article>
-        <article class="blogs_1">
-            <header>
-                @Html.Raw(ViewBag.MyImg[14])
-            </header>
-            <h2 class="blogs">@Html.Raw(ViewBag.MyName[14])</h2>
-            @Html.Raw(ViewBag.MyHtml[14])
-
-            <p><a href=@ViewBag.MyAction[14] class="my-class1">Читать полностью</a></p>
-        </article>
-
-    </main>
+    <div id="scrolList">
+        @Html.Partial("Blog1part")
+    </div>
+    <div id="loading"><img src='@Url.Content("~/img/loading_spinner.gif")'></div>
 
 </div>
+
+
+

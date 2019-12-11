@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebApplication6.Models.Article>
+<main>
+@{int i = 0;}
+@foreach (var item in Model)
+{
+    i++;
+    if (((i-1) % 3) == 0)
+    {
+        @:</main><main>
+}
+    <article class="blogs_1">
+        <a href="@item.MyAction">
+            <header>
+                @Html.Raw(item.MyImg)
+            </header>
+            <h2 class="blogs"> @Html.Raw(item.MyName)</h2>
+        </a>
+@Html.Raw(item.MyHtml)
+</article>
+
+
+}
+</main>

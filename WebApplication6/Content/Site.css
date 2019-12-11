@@ -78,18 +78,18 @@ body {
 }
 
 a, a:visited { /* порядок правил для ссылок имеет значение */
-    color: #339933;
-    text-decoration: underline;
+    color: darkslategray;
+    text-decoration: none;
 }
 
     a:hover {
-        color: #339933;
-        text-decoration: none;
+        color: darkslategray;
+        text-decoration: underline;
     }
 
     a:focus, a:active {
-        color: #339933;
-        text-decoration: underline;
+        color: darkslategray;
+        text-decoration: none;
     }
 
  h2, h3, h4, h5 {
@@ -241,7 +241,7 @@ main {
             color: darkslategrey
         }
 
-    article > header {
+    article  header {
         font-size: 10px;
         background: none;
         margin-bottom: 10px;
@@ -371,11 +371,12 @@ footer {
     border-top: 1px solid #e1e0e0;
     text-align: center;
     font-size: 0.8125em;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
     footer img {
-        padding-bottom: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 li {
     list-style-position: inside;
