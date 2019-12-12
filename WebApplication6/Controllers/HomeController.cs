@@ -19,6 +19,11 @@ namespace WebApplication6.Controllers
 
             return View();
         }
+        public ActionResult TEST()
+        {
+
+            return View();
+        }
         public ActionResult About()
         {
             return View();

@@ -156,6 +156,7 @@
     <Content Include="404.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="img\404.jpg" />
+    <Content Include="img\bg-13.png" />
     <Content Include="img\bomber_1.jpg" />
     <Content Include="img\bomber_2.jpg" />
     <Content Include="img\bomber_3.jpg" />
@@ -241,6 +242,7 @@
     <Content Include="img\logo.jpg" />
     <Content Include="img\me.png" />
     <Content Include="img\nechego_nadet.jpg" />
+    <Content Include="img\photo_top.jpg" />
     <Content Include="img\read_coco_1.jpg" />
     <Content Include="img\read_coco_2.jpg" />
     <Content Include="img\safari_1.jpg" />
@@ -294,6 +296,7 @@
     <Content Include="img\viber_phone.ico" />
     <Content Include="img\whichapplication.ico" />
     <Content Include="insta.ico" />
+    <Content Include="Scripts\open_modal.js" />
     <Content Include="Scripts\script_blog.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -409,6 +412,7 @@
     <Content Include="thumb\travel_bagage_6.jpg" />
     <Content Include="thumb\travel_bagage_7.jpg" />
     <Content Include="thumb\travel_bagage_8.jpg" />
+    <Content Include="Views\Home\TEST.cshtml" />
     <None Include="Views\Home\Sitemap.cshtml" />
     <Content Include="whichapplication.ico" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

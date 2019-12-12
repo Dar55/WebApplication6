@@ -1,156 +1,158 @@
-﻿	<style type="text/css">
-	body {
-		background-color: #fff;
-		font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-		margin: 0;
-	}
+﻿@{
+    ViewBag.Title = "Карта сайта";
+    ViewBag.Description = "Карта сайта";
+}
+<style>
 
-	#top {
+    body {
+        background-color: #fff;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        margin: 0;
+    }
 
-		background-color: #b1d1e8;
-		font-size: 16px;
-		padding-bottom: 40px;
-	}
+    #top {
+        background-color: #b1d1e8;
+        font-size: 16px;
+        padding-bottom: 40px;
+    }
 
-	nav {
-		font-size: 24px;
+    nav {
+        font-size: 24px;
+        margin: 0px 30px 0px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: #f3f3f3;
+        color: #666;
+        box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        text-align: center;
+        z-index: 1;
+    }
 
-		margin: 0px 30px 0px;
-		border-bottom-left-radius: 6px;
-		border-bottom-right-radius: 6px;
-		background-color: #f3f3f3;
-		color: #666;
-		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-		padding: 10px 0;
-		text-align: center;
-		z-index: 1;
-	}
+    h3 {
+        margin: auto;
+        padding: 10px;
+        max-width: 600px;
+        color: #666;
+    }
 
-	h3 {
-		margin: auto;
-		padding: 10px;
-		max-width: 600px;
-		color: #666;
-	}
+        h3 span {
+            float: right;
+        }
 
-	h3 span {
-		float: right;
-	}
-
-	h3 a {
-		font-weight: normal;
-		display: block;
-	}
-
-
-	#cont {
-		position: relative;
-		border-radius: 6px;
-		box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-
-		background: #f3f3f3;
-
-		margin: -20px 30px 0px 30px;
-		padding: 20px;
-	}
-
-	a:link,
-	a:visited {
-		color: #0180AF;
-		text-decoration: underline;
-	}
-
-	a:hover {
-		color: #666;
-	}
+        h3 a {
+            font-weight: normal;
+            display: block;
+        }
 
 
-	#footer {
-		padding: 10px;
-		text-align: center;
-	}
+    #cont {
+        position: relative;
+        border-radius: 6px;
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        background: #f3f3f3;
+        margin: -20px 30px 0px 30px;
+        padding: 20px;
+    }
 
-	ul {
-    	margin: 0px;
+    a:link,
+    a:visited {
+        color: #0180AF;
+        text-decoration: underline;
+    }
 
-    	padding: 0px;
-    	list-style: none;
-	}
-	li {
-		margin: 0px;
-	}
-	li ul {
-		margin-left: 20px;
-	}
+    a:hover {
+        color: #666;
+    }
 
-	.lhead {
-		background: #ddd;
-		padding: 10px;
-    	margin: 10px 0px;
-	}
 
-	.lcount {
-		padding: 0px 10px;
-	}
+    #footer {
+        padding: 10px;
+        text-align: center;
+    }
 
-	.lpage {
-		border-bottom: #ddd 1px solid;
-		padding: 5px;
-	}
-	.last-page {
-		border: none;
-	}
-	</style>
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
 
-	<div id="top">
-		<nav>makestyles.ru HTML Site Map</nav>
-		<h3>
-<span>Last updated: 2019, December 11<br />
-Total pages: 29</span>
-<a href="https://makestyles.ru">makestyles.ru Homepage</a>
-</h3></div>
-	<div id="cont">
-		<ul class="level-0">
+    li {
+        margin: 0px;
+    }
 
-            <li class="lhead">/  <span class="lcount">1 pages</span></li>
-            
-<li class="lpage last-page"><a href="https://makestyles.ru/" title="Русскоязычный стилист Кипра - Стиль под пальмами">Русскоязычный стилист Кипра - Стиль под пальмами</a></li><li><ul class="level-1">
+        li ul {
+            margin-left: 20px;
+        }
 
-            <li class="lhead">Home/  <span class="lcount">20 pages</span></li>
-            
-<li class="lpage"><a href="https://makestyles.ru/Home/Contact" title="Как меня найти">Как меня найти</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Services" title="Список Услуг">Список Услуг</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/About" title="Обо мне">Обо мне</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Blogs" title="Блог о стиле и моде">Блог о стиле и моде</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/RsvpForm" title="Форма для связи">Форма для связи</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Dramma_style" title="Драматический стиль в моде">Драматический стиль в моде</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Hystory_mode" title="Статья о появлении трендов">Статья о появлении трендов</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Shoes_men" title="Статья о мужской обуви">Статья о мужской обуви</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Read_Coco" title="Коко Шанель">Коко Шанель</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Black_Friday" title="Черная пятница">Черная пятница</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Travel_Bagage" title="Какие вещи взять в отпуск">Какие вещи взять в отпуск</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Skin" title="Статья о кожанном тренде в моде">Статья о кожанном тренде в моде</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Article_gilet" title="https://makestyles.ru/Home/Article_gilet">https://makestyles.ru/Home/Article_gilet</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Stylist_for_photosession" title="Стилисти фотосессия">Стилисти фотосессия</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Dont_trust_stylist" title="Вера в стилистов">Вера в стилистов</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Services_stylist" title="Какие услуги оказывает стилист">Какие услуги оказывает стилист</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Grange" title="Стиль Гранж">Стиль Гранж</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Style_casual" title="Стиль Кэжуал">Стиль Кэжуал</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Base" title="Базовый гардероб">Базовый гардероб</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Belt" title="Статья о ремнях">Статья о ремнях</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Bomber" title="Бомбер">Бомбер</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Kristoal_balensiaga" title="Кристоаль Баленсиага">Кристоаль Баленсиага</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Serials" title="Фильмы и сериалы о моде">Фильмы и сериалы о моде</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Shirt" title="О белой рубашке">О белой рубашке</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Nechego_nadet" title="Тренды в моде">Тренды в моде</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Change_jeans" title="Замена джинсам">Замена джинсам</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Ties" title="Галстуки">Галстуки</a></li>
-<li class="lpage"><a href="https://makestyles.ru/Home/Style_Military" title="Стиль Милитари">Стиль Милитари</a></li>
-<li class="lpage last-page"><a href="https://makestyles.ru/Home/Style_Safari" title="Стиль Сафари">Стиль Сафари</a></li>
-</ul></li>
-</ul>
+    .lhead {
+        background: #ddd;
+        padding: 10px;
+        margin: 10px 0px;
+    }
 
-	</div>
-	<div id="footer">
-		Page created with <a target="_blank" href="https://www.xml-sitemaps.com">Google XML sitemap and html sitemaps generator</a> | Copyright &copy; 2005-2019 XML-Sitemaps.com
-	</div>
+    .lcount {
+        padding: 0px 10px;
+    }
+
+    .lpage {
+        border-bottom: #ddd 1px solid;
+        padding: 5px;
+    }
+
+    .last-page {
+        border: none;
+    }
+</style>
+<div id="top">
+    <nav>makestyles.ru HTML Site Map</nav>
+    <h3>
+        <span>
+            Last updated: 2019, December 11<br />
+            Total pages: 29
+        </span>
+        <a href="https://makestyles.ru">makestyles.ru Homepage</a>
+    </h3>
+</div>
+<div id="cont">
+    <ul class="level-0">
+        <li class="lhead">/  <span class="lcount">1 pages</span></li>
+
+        <li class="lpage last-page"><a href="https://makestyles.ru/" title="Русскоязычный стилист Кипра - Стиль под пальмами">Русскоязычный стилист Кипра - Стиль под пальмами</a></li>
+        <li>
+            <ul class="level-1">
+                <li class="lhead">Home/  <span class="lcount">29 pages</span></li>
+
+                <li class="lpage"><a href="https://makestyles.ru/Home/Contact" title="Как меня найти">Как меня найти</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Services" title="Список Услуг">Список Услуг</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/About" title="Обо мне">Обо мне</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Blogs" title="Блог о стиле и моде">Блог о стиле и моде</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/RsvpForm" title="Форма для связи">Форма для связи</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Dramma_style" title="Драматический стиль в моде">Драматический стиль в моде</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Hystory_mode" title="Статья о появлении трендов">Статья о появлении трендов</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Shoes_men" title="Статья о мужской обуви">Статья о мужской обуви</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Read_Coco" title="Коко Шанель">Коко Шанель</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Black_Friday" title="Черная пятница">Черная пятница</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Travel_Bagage" title="Какие вещи взять в отпуск">Какие вещи взять в отпуск</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Skin" title="Статья о кожанном тренде в моде">Статья о кожанном тренде в моде</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Article_gilet" title="https://makestyles.ru/Home/Article_gilet">https://makestyles.ru/Home/Article_gilet</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Stylist_for_photosession" title="Стилисти фотосессия">Стилисти фотосессия</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Dont_trust_stylist" title="Вера в стилистов">Вера в стилистов</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Services_stylist" title="Какие услуги оказывает стилист">Какие услуги оказывает стилист</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Grange" title="Стиль Гранж">Стиль Гранж</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Style_casual" title="Стиль Кэжуал">Стиль Кэжуал</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Base" title="Базовый гардероб">Базовый гардероб</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Belt" title="Статья о ремнях">Статья о ремнях</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Bomber" title="Бомбер">Бомбер</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Kristoal_balensiaga" title="Кристоаль Баленсиага">Кристоаль Баленсиага</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Serials" title="Фильмы и сериалы о моде">Фильмы и сериалы о моде</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Shirt" title="О белой рубашке">О белой рубашке</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Nechego_nadet" title="Тренды в моде">Тренды в моде</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Change_jeans" title="Замена джинсам">Замена джинсам</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Ties" title="Галстуки">Галстуки</a></li>
+                <li class="lpage"><a href="https://makestyles.ru/Home/Style_Military" title="Стиль Милитари">Стиль Милитари</a></li>
+                <li class="lpage last-page"><a href="https://makestyles.ru/Home/Style_Safari" title="Стиль Сафари">Стиль Сафари</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

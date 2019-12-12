@@ -1,18 +1,29 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang = "ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content=@ViewBag.Description />
+    <meta name="description" content="@ViewBag.Description" />
     <meta name="keywords" content="стилист, имиджмейкер, собственный стиль, стилист на Кипре, онлайн услуги стилиста" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>@ViewBag.Title</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://makestyles.ru/Scripts/script_blog.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153399109-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-153399109-1');
+    </script>
+    <script src="https://makestyles.ru/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="https://makestyles.ru/Scripts/script_blog.js"></script>
+    <script src="https://makestyles.ru/Scripts/open_modal.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
 
@@ -48,7 +59,7 @@
         </div>
         <div>
             <!--LiveInternet counter-->
-            <script type="text/javascript">
+            <script>
                 document.write('<a href="//www.liveinternet.ru/click" ' +
                     'target="_blank"><img src="//counter.yadro.ru/hit?t44.6;r' +
                     escape(document.referrer) + ((typeof (screen) == 'undefined') ? '' :
@@ -59,7 +70,7 @@
                     'border="0" width="31" height="31"><\/a>')
             </script><!--/LiveInternet-->
             <!-- Yandex.Metrika counter -->
-            <script type="text/javascript">
+            <script>
                 (function (m, e, t, r, i, k, a) {
                     m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
                     m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
@@ -75,14 +86,7 @@
             <noscript><div><img src="https://mc.yandex.ru/watch/56272690" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
             <!-- /Yandex.Metrika counter -->
             <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153399109-1"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
 
-                gtag('config', 'UA-153399109-1');
-            </script>
 
         </div>
         @Html.ActionLink("Карта сайта", "Sitemap", "Home")
