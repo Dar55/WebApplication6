@@ -1,4 +1,5 @@
-﻿@{
+﻿@model WebApplication6.Models.GuestResponse
+@{
     ViewBag.Title = "Русскоязычный стилист Кипра - Стиль под пальмами";
     ViewBag.Description = "Стилист - имиджмейкер проживающий на Кипре поможет подобрать стиль персонально для вас. Основное направление работы оказание услуг, чтобы стильно выглядеть в жарких странах";
 }
@@ -19,7 +20,10 @@
                     <li>Стилизация фотосессий</li>
                 </ul><br />
                 <p>Услуги оказываются как очно - на Кипре, так и онлайн - в любой точке мира.</p>
-                <div>@Html.ActionLink("Связаться со мной", "RsvpForm", "Home", null, new { @class = "my-class2" })</div>
+
+                <div>
+                    <button class="open-modal">Связаться со мной</button>
+                </div>
             </div>
         </div>
     </div>
@@ -27,27 +31,8 @@
 
 <div class="center-block-main content">
     <main>
-                    <button class="open-modal">Когда вам нужна помощь стилиста</button>
-                <div class="modal-overlay"></div>
-                <div class="modal-wrapper">
-                    <div class="modal js-blur">
-                        <button class="close-modal">×</button>
-                        <h2>КОГДА ВАМ НУЖНА ПОМОЩЬ СТИЛИСТА</h2>
-                        <ul>
-                            <li>Ваш статус изменился, старая одежда не подходит, а как подобрать новую вы не знаете.</li>
-                            <li>
-                                Не понимаете, какие цвета и фасоны вам идут.
-                            </li>
-                            <li>
-                                Классическое “вещей много, а надеть нечего”, носите только джинсы и футболки.
-                            </li>
-                            <li>
-                                Потратили кучу денег на одежду, но ее не носите, так как не понимаете с чем ее сочетать.
-                            </li>
-                            <li>Понимаете, что имеющиеся вещи морально устарели, но рука не поднимается их выбросить.</li>
-                        </ul>
-                    </div>
-                </div>
+        <button class="open-modal">Когда вам нужна помощь стилиста</button>
+
         <article>
             <h2>РЕВИЗИЯ ГАРДЕРОБА</h2>
 
@@ -229,6 +214,64 @@
             </div>
 
         </article>
-        <div>@Html.ActionLink("Свяжитесь со мной", "RsvpForm", "Home", null, new { @class = "my-class2" })</div>
+        <div><button class="open-modal">Связаться со мной</button></div>
     </main>
 </div>
+<div class="modal-overlay"></div>
+<div class="modal-wrapper">
+    <div class="modal js-blur" id="envelope">
+        <button class="close-modal"></button>
+
+        <h4>Напишите мне</h4>
+        <p>
+            @using (Html.BeginForm())
+        {
+        <p class="forms">@Html.TextBoxFor(x => x.Name, new { @Value = "Ваше имя", @onclick = "this.value='';" }) </p>
+
+        <p class="forms">
+            @Html.TextBoxFor(x => x.Email, new { @Value = "Ваша электронная почта", @onclick = "this.value='';" })
+        </p>
+        <p class="forms">@Html.TextBoxFor(x => x.Phone, new { @Value = "Ваш номер телефона", @onclick = "this.value='';" })</p>
+
+        <p class="forms">@Html.TextAreaFor(x => x.Texts, 8, 50, new { @placeholder = "Дополнительная информация", @class = "Texts" })</p><br />
+        <input type="submit" class="Texts" value="Отправить" />
+}
+        </div>
+
+
+        <div class="modal js-blur">
+            <button class="close-modal"></button>
+            <h2>КОГДА ВАМ НУЖНА ПОМОЩЬ СТИЛИСТА</h2>
+            <ul>
+                <li>Ваш статус изменился, старая одежда не подходит, а как подобрать новую вы не знаете.</li>
+                <li>
+                    Не понимаете, какие цвета и фасоны вам идут.
+                </li>
+                <li>
+                    Классическое “вещей много, а надеть нечего”, носите только джинсы и футболки.
+                </li>
+                <li>
+                    Потратили кучу денег на одежду, но ее не носите, так как не понимаете с чем ее сочетать.
+                </li>
+                <li>Понимаете, что имеющиеся вещи морально устарели, но рука не поднимается их выбросить.</li>
+            </ul>
+        </div>
+        <div class="modal js-blur" id="envelope">
+            <button class="close-modal"></button>
+
+            <h4>Напишите мне</h4>
+                @using (Html.BeginForm())
+                {
+                <p class="forms">@Html.TextBoxFor(x => x.Name, new { @Value = "Ваше имя", @onclick = "this.value='';" }) </p>
+
+                <p class="forms">
+                    @Html.TextBoxFor(x => x.Email, new { @Value = "Ваша электронная почта", @onclick = "this.value='';" })
+                </p>
+                <p class="forms">@Html.TextBoxFor(x => x.Phone, new { @Value = "Ваш номер телефона", @onclick = "this.value='';" })</p>
+
+                <p class="forms">@Html.TextAreaFor(x => x.Texts, 8, 50, new { @placeholder = "Дополнительная информация", @class="Texts" })</p><br />
+                <input type="submit" class="Texts" value="Отправить" />
+            }
+            </div>
+
+        </div>

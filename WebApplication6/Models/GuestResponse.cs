@@ -15,10 +15,6 @@ namespace WebApplication6.Models
         public string Email { get; set; }
         [Required(ErrorMessage = "Введите,пожалуйста, номер телефона")]
         public string Phone { get; set; }
-        [Required(ErrorMessage = "Пожалуйста, выберите услугу")]
-        public string WillAttend { get; set; }
-        [Required(ErrorMessage = "Пожалуйста, выберите тип услуги")]
-        public bool? Online { get; set; }
         public string Texts { get; set; }
 
     }

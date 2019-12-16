@@ -23,9 +23,9 @@
             <div class="cont">
                 <h3 class="zagolovok3">Я В СОЦСЕТЯХ:</h3>
                 <address>
-                    <a href="whatsapp://send?text=Hello&phone=+79169271003&abid=+79169271003"><img src="../../img/whichapplication.ico" class="imgcontact" alt="WhatsApp" /> </a>
-                    <a href="https://www.instagram.com/makestyle_notfashion/"><img src="../../img/insta.ico" class="imgcontact" alt="Instagram" /> </a>
-                    <a href="https://www.facebook.com/Katerina-Rostova-1550039201793595/"><img src="../../img/social_facebook.ico" class="imgcontact" alt="Facebook" /> </a>
+                    <a href="whatsapp://send?text=Hello&phone=+79169271003&abid=+79169271003" rel="nofollow"><img src="../../img/whichapplication.ico" class="imgcontact" alt="WhatsApp" /> </a>
+                    <a href="https://www.instagram.com/makestyle_notfashion/" rel="nofollow"><img src="../../img/insta.ico" class="imgcontact" alt="Instagram" /> </a>
+                    <a href="https://www.facebook.com/Katerina-Rostova-1550039201793595/" rel="nofollow"><img src="../../img/social_facebook.ico" class="imgcontact" alt="Facebook" /> </a>
                 </address>
             </div>
         </div>
@@ -34,7 +34,7 @@
         <article>
 
             <h3 class="zagolovok3">ФОРМА ДЛЯ СВЯЗИ</h3>
-            <p>Если вы хотите чтобы с вами связались заполните форму идущую ниже и я с вами свяжусь.</p>
+            <p>Если вы хотите чтобы с вами связались заполните форму идущую ниже.</p>
             <p>
                 @using (Html.BeginForm())
         {
@@ -46,27 +46,7 @@
         </p>
         <p>Номер телефона:<br />@Html.TextBoxFor(x => x.Phone)</p>
 
-        <p>
-            Услуга:<br /> @Html.DropDownListFor(x => x.WillAttend, new[] {
-new SelectListItem() {Text = "Разбор гардероба", Value =
-"1"},
-new SelectListItem() {Text = "Шоппинг", Value =
-"2"},
-new SelectListItem() {Text = "Создание капсулы", Value =
-"3"},
-new SelectListItem() {Text = "Журнал стиля", Value = "4"},
-new SelectListItem() {Text = "Стилизация фотосессий", Value = "5"}
-},
-"Выберите опцию")
-        </p>
-        <p>
-            Тип услуги:<br /> @Html.DropDownListFor(x => x.Online, new[] {
-new SelectListItem() {Text = "Онлайн", Value =bool.TrueString},
-new SelectListItem() {Text = "Личное присутствие", Value =bool.FalseString},
-},
-"Выберите опцию")
-        </p>
-        <p>Дополнительные пожелания:<br />@Html.TextAreaFor(x => x.Texts, 5, 26, new { })</p><br /><br /><br />
+<br /><br /><br />
         <input type="submit" value="Отправить" />
 }
             </article>

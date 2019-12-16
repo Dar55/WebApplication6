@@ -18,27 +18,6 @@
                     Электронная почта:<br />@Html.TextBoxFor(x => x.Email)
                 </p>
                 <p>Номер телефона:<br />@Html.TextBoxFor(x => x.Phone)</p>
-
-                <p>
-                    Услуга:<br /> @Html.DropDownListFor(x => x.WillAttend, new[] {
-new SelectListItem() {Text = "Разбор гардероба", Value =
-"1"},
-new SelectListItem() {Text = "Шоппинг", Value =
-"2"},
-new SelectListItem() {Text = "Создание капсулы", Value =
-"3"},
-new SelectListItem() {Text = "Журнал стиля", Value = "4"},
-new SelectListItem() {Text = "Стилизация фотосессий", Value = "5"}
-},
-"Выберите опцию")
-                </p>
-                <p>
-                    Тип услуги:<br /> @Html.DropDownListFor(x => x.Online, new[] {
-new SelectListItem() {Text = "Онлайн", Value =bool.TrueString},
-new SelectListItem() {Text = "Личное присутствие", Value =bool.FalseString},
-},
-"Выберите опцию")
-                </p>
                 <p>Дополнительные пожелания:<br />@Html.TextAreaFor(x => x.Texts, 5, 26, new { })</p><br /><br /><br />
                 <input type="submit" value="Отправить" />
             }

@@ -156,6 +156,7 @@
     <Content Include="404.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="img\404.jpg" />
+    <Content Include="img\bg-1.jpg" />
     <Content Include="img\bg-13.png" />
     <Content Include="img\bomber_1.jpg" />
     <Content Include="img\bomber_2.jpg" />
@@ -174,6 +175,12 @@
     <Content Include="img\change_jeans_7.jpg" />
     <Content Include="img\change_jeans_8.jpg" />
     <Content Include="img\change_jeans_9.jpg" />
+    <Content Include="img\contact_img\bg.png" />
+    <Content Include="img\contact_img\close.png" />
+    <Content Include="img\contact_img\divider.png" />
+    <Content Include="img\contact_img\envelope-1.png" />
+    <Content Include="img\contact_img\envelope-2.png" />
+    <Content Include="img\contact_img\envelope.png" />
     <Content Include="img\dramma_style_1.jpg" />
     <Content Include="img\dramma_style_2.jpg" />
     <Content Include="img\dramma_style_3.jpg" />
@@ -245,6 +252,14 @@
     <Content Include="img\photo_top.jpg" />
     <Content Include="img\read_coco_1.jpg" />
     <Content Include="img\read_coco_2.jpg" />
+    <Content Include="img\retro_style_1.jpg" />
+    <Content Include="img\retro_style_2.jpg" />
+    <Content Include="img\retro_style_3.jpg" />
+    <Content Include="img\retro_style_4.jpg" />
+    <Content Include="img\retro_style_5.jpg" />
+    <Content Include="img\romantic_style_1.jpg" />
+    <Content Include="img\romantic_style_2.jpg" />
+    <Content Include="img\romantic_style_3.jpg" />
     <Content Include="img\safari_1.jpg" />
     <Content Include="img\safari_2.jpg" />
     <Content Include="img\safari_3.jpg" />
@@ -278,6 +293,11 @@
     <Content Include="img\style_casual_3.jpg" />
     <Content Include="img\style_casual_4.jpg" />
     <Content Include="img\style_casual_5.jpg" />
+    <Content Include="img\style_female_1.jpg" />
+    <Content Include="img\style_female_2.jpg" />
+    <Content Include="img\style_female_3.jpg" />
+    <Content Include="img\style_female_4.jpg" />
+    <Content Include="img\style_female_5.jpg" />
     <Content Include="img\think_about.jpg" />
     <Content Include="img\tie_1.jpg" />
     <Content Include="img\tie_2.jpg" />
@@ -367,6 +387,14 @@
     <Content Include="thumb\military_4.jpg" />
     <Content Include="thumb\military_5.jpg" />
     <Content Include="thumb\military_6.jpg" />
+    <Content Include="thumb\retro_style_1.jpg" />
+    <Content Include="thumb\retro_style_2.jpg" />
+    <Content Include="thumb\retro_style_3.jpg" />
+    <Content Include="thumb\retro_style_4.jpg" />
+    <Content Include="thumb\retro_style_5.jpg" />
+    <Content Include="thumb\romantic_style_1.jpg" />
+    <Content Include="thumb\romantic_style_2.jpg" />
+    <Content Include="thumb\romantic_style_3.jpg" />
     <Content Include="thumb\safari_1.jpg" />
     <Content Include="thumb\safari_2.jpg" />
     <Content Include="thumb\safari_3.jpg" />
@@ -398,6 +426,11 @@
     <Content Include="thumb\style_casual_3.jpg" />
     <Content Include="thumb\style_casual_4.jpg" />
     <Content Include="thumb\style_casual_5.jpg" />
+    <Content Include="thumb\style_female_1.jpg" />
+    <Content Include="thumb\style_female_2.jpg" />
+    <Content Include="thumb\style_female_3.jpg" />
+    <Content Include="thumb\style_female_4.jpg" />
+    <Content Include="thumb\style_female_5.jpg" />
     <Content Include="thumb\tie_1.jpg" />
     <Content Include="thumb\tie_2.jpg" />
     <Content Include="thumb\tie_3.jpg" />
@@ -472,6 +505,9 @@
     <Content Include="Views\Home\Kristoal_balensiaga.cshtml" />
     <Content Include="Views\Home\Change_Jeans.cshtml" />
     <Content Include="Views\Home\Serials.cshtml" />
+    <Content Include="Views\Home\Style_Romantic.cshtml" />
+    <Content Include="Views\Home\Style_Retro.cshtml" />
+    <Content Include="Views\Home\Style_Female.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

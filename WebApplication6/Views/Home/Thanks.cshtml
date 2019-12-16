@@ -8,6 +8,9 @@
                     int s = 0;
                     try
                     {
+                        if (Model.Name is null) { Model.Name = "не заполнено"; }
+                        if (Model.Name is null) { Model.Email = "не заполнено"; }
+                        if (Model.Name is null) { Model.Phone = "не заполнено"; }
                         WebMail.SmtpServer = "makestyles.ru";
                         WebMail.SmtpPort = 25;
                         WebMail.EnableSsl = false;
@@ -16,7 +19,6 @@
                         WebMail.From = "info@makestyles.ru";
                         WebMail.Send("dar55@yandex.ru", "RSVP Notification",
                         "Имя Клиента:  " + Model.Name + "                  Email:  " + Model.Email + "         Номер телефона:" + Model.Phone
-                        + "         Услуга:" + Model.WillAttend + "         Тип услуги:" + Model.Online
                         );
                     }
                     catch (Exception)

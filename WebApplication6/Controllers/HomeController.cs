@@ -19,7 +19,17 @@ namespace WebApplication6.Controllers
 
             return View();
         }
-        public ActionResult TEST()
+        public ActionResult Style_Retro()
+        {
+
+            return View();
+        }
+        public ActionResult Style_Female()
+        {
+
+            return View();
+        }
+        public ActionResult Style_Romantic()
         {
 
             return View();
@@ -158,6 +168,10 @@ namespace WebApplication6.Controllers
         {
             return View();
         }
+        public ActionResult TEST()
+        {
+            return View();
+        }
         public ActionResult Black_Friday()
         {
             return View();
@@ -198,6 +212,25 @@ namespace WebApplication6.Controllers
                     // there is a validation error
                     return View();
                 }
+            }
+        }
+        [HttpPost]
+        public ActionResult Index(GuestResponse guestResponse)
+        {
+                    return View("Thanks", guestResponse);
+        }
+        [HttpPost]
+        public ActionResult Contact(GuestResponse guestResponse)
+        {
+            if (ModelState.IsValid)
+            {
+                // TODO: Email response to the party organizer
+                return View("Thanks", guestResponse);
+            }
+                else
+                {
+                // there is a validation error
+                return View();
             }
         }
     }
