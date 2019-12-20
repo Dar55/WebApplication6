@@ -2,45 +2,236 @@
     ViewBag.Description = "Блог стилиста-имиджмейкера о стиле, моде, истории моды, новых веяниях в исскустве одеваться";
 }
 
-<script>
-    $(function () {
 
-        $('div#loading').hide();
+<head>
 
-        var page = 0;
-        var _inCallback = false;
-        function loadItems() {
-            if (page > -1 && !_inCallback) {
-                _inCallback = true;
-                page++;
-                $('div#loading').show();
-                $.ajax({
-                    type: 'GET',
-                    url: '/Home/Blogs/' + page,
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
+    <!-- bootstrap 4.03 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css">
+    <script>
+        $(function () {
 
-                    success: function (data, textstatus) {
-                        if (page < 6) {
-                            $("#scrolList").append(data);
+            $('div#loading').hide();
+
+            var page = 0;
+            var _inCallback = false;
+            function loadItems() {
+                if (page > -1 && !_inCallback) {
+                    _inCallback = true;
+                    page++;
+                    $('div#loading').show();
+                    $.ajax({
+                        type: 'GET',
+                        url: '/Home/Blogs/' + page,
+
+                        success: function (data, textstatus) {
+                            if (page < 6) {
+                                $("#scrolList").append(data);
+                            }
+                            else {
+                                page = -1;
+                            }
+                            _inCallback = false;
+                            $("div#loading").hide();
                         }
-                        else {
-                            page = -1;
-                        }
-                        _inCallback = false;
-                        $("div#loading").hide();
+                    });
+                }
+            }
+            // обработка события скроллинга
+            $(window).scroll(function () {
+                if (Math.ceil($(window).scrollTop()) > $(document).height() - $(window).height()-9) {
+                    loadItems();
+                }
+            });
+       })
+       
+    </script>
+    <style>
+        .c-card__wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 30%;
+            float: left;
+            margin-left: 20px;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            background-size: contain;
+            background-position: top center;
+            background-repeat: no-repeat;
+            min-height: 400px;
+            -webkit-box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3), 0 16px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3), 0 16px 12px rgba(0, 0, 0, 0.2);
+        }
+
+            .c-card__wrapper:hover .c-info li span {
+                opacity: 1;
+                -webkit-transform: translate(-50%, -10px);
+                transform: translate(-50%, -10px);
+            }
+
+            .c-card__wrapper:hover .c-card__body {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+        .c-card__header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 1.5rem 1rem;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .c-card__body {
+            margin-top: auto;
+            color: #fff;
+            -webkit-transform: translateY(calc(170px + 3.2rem));
+            transform: translateY(calc(170px + 3.2rem));
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
+        }
+
+        .c-card__content {
+            padding: 1em;
+            position: relative;
+            background-color: hsla(200,13%,17%, 0.5);
+            z-index: 1;
+        }
+
+        .c-card__author {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .c-card__title {
+            font-weight: 300;
+            font-size: 26px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+            .c-card__title a {
+                color: #fff;
+            }
+
+                .c-card__title a:hover {
+                    text-decoration: none;
+                }
+
+        .c-card__desc {
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .c-card__more {
+            display: inline-block;
+            margin: 1rem auto 0.5rem;
+            text-align: center;
+            color: #fff;
+            line-height: 1;
+            position: relative;
+            font-weight: 300;
+        }
+
+            .c-card__more:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .c-card__more:hover::after {
+                    -webkit-transform: translate(20px, -50%);
+                    transform: translate(20px, -50%);
+                    opacity: 1;
+                }
+
+            .c-card__more::after {
+                content: '\2192';
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                -webkit-transition: all ease 0.3s;
+                transition: all ease 0.3s;
+            }
+
+        .c-date {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .c-info {
+            list-style: none;
+            margin: 0;
+        }
+
+            .c-info li {
+                position: relative;
+                display: inline-block;
+                vertical-align: bottom;
+                margin: 0 4px;
+            }
+
+                .c-info li a {
+                    color: #ffffff;
+                }
+
+                    .c-info li a:hover {
+                        text-decoration: none;
                     }
-                });
+
+                .c-info li span {
+                    font-size: 14px;
+                    position: absolute;
+                    left: 50%;
+                    top: -4px;
+                    opacity: 0;
+                    -webkit-transform: translate(-50%, 0);
+                    transform: translate(-50%, 0);
+                    -webkit-transition: all ease 0.25s;
+                    transition: all ease 0.25s;
+                }
+        @@media screen and (max-width:768px) {
+            .c-card__wrapper {
+                float: none;
+                width: 95%;
+                min-height: 550px;
+                padding-right: 5px;
             }
         }
-        // обработка события скроллинга
-        $(window).scroll(function () {
-            if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-
-                loadItems();
+        @@media screen and (max-width:480px) {
+            .c-card__wrapper {
+                float: none;
+                width: 95%;
+                min-height: 550px;
+                padding-right: 5px;
             }
-        });
-    })
-</script>
+        }
+
+
+    </style>
+</head>
 <div class="center-block-main content">
+
     <div id="scrolList">
         @Html.Partial("Blog1part")
     </div>

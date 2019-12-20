@@ -111,7 +111,7 @@ namespace WebApplication6.Controllers
             while (rdr.Read())
             {
                articles.Add(
-                    new Article { MyId = Convert.ToInt32(rdr["id"].ToString()), MyImg = rdr["img_code"].ToString(), MyName = rdr["name"].ToString(), MyHtml = rdr["html_code"].ToString(), MyAction = rdr["action_code"].ToString() });
+                    new Article { MyId = Convert.ToInt32(rdr["id"].ToString()), MyImg = rdr["img_code"].ToString(), MyName = rdr["name"].ToString(), MyHtml = rdr["html_code"].ToString(), MyAction = rdr["action_code"].ToString(), MyDate=rdr["dates"].ToString() });
             }
         }
 

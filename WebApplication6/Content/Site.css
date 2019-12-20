@@ -268,12 +268,7 @@ main {
         }
 
 
-    article.blogs_1 {
-        margin-bottom: 70px;
-        padding-left:10px;
-        float: left;
-        width: 32%;
-    }
+
 
 h2.blogs {
     font-size: 1.75em;
@@ -309,22 +304,10 @@ a:hover.my-class1 {
     border-color: #339933;
 }
 
-
-
-
- 
-
 a:hover.more {
     color: #339933;
     border-color: #339933;
 }
-
-aside {
-    float: right;
-    width: 28.3%;
-    margin-top: 70px;
-}
-
 
 .previous-link {
     float: left;
@@ -488,12 +471,6 @@ svg {
         float: none;
         width: 100%;
         margin-top: 30px;
-    }
-
-    article.blogs_1 {
-        float: none;
-        width: 95%;
-        padding-right:5px;
     }
 
     img.blogs {

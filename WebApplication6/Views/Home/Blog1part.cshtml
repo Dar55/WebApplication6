@@ -8,15 +8,33 @@
     {
         @:</div><div class="blogus">
 }
-    <article class="blogs_1">
-        <a href="@item.MyAction">
-            <header>
-                @Html.Raw(item.MyImg)
-            </header>
-            <h2 class="blogs"> @Html.Raw(item.MyName)</h2>
-        </a>
-@Html.Raw(item.MyHtml)
-</article>
+                    <article class="c-card__wrapper" style="background-image: url(@Html.Raw(item.MyImg))">
+                        <div class="c-card__header">
+                            <!-- begin c-date -->
+                            <div class="c-date">
+                                <span>@Html.Raw(item.MyDate)</span>
+                            </div>
+                            <!-- end c-date -->
+                            <!-- begin c-info -->
+                            <ul class="c-info">
+                                <li><a href="#" class="far fa-bookmark"></a></li>
+                                <li><a href="#" class="far fa-heart"><span></span></a></li>
+                                <li><a href="#" class="far fa-comment"><span></span></a></li>
+                            </ul>
+                        </div>
+                            <!-- end c-info -->
+                            <div class="c-card__body">
+                                <div class="c-card__content">
+                                    <h3 class="c-card__title">
+                                        <a href="@item.MyAction">@Html.Raw(item.MyName)</a>
+                                    </h3>
+                                    <div class="c-card__desc">
+                                        @Html.Raw(item.MyHtml)
+                                   </div>
+                                    <a href="@item.MyAction" class="c-card__more">Подробнее</a>
+                                </div>
+                            </div>
+                    </article>
 
 
 }

@@ -154,10 +154,36 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
-    <Content Include="Content\bootstrap.css" />
     <Content Include="img\404.jpg" />
     <Content Include="img\bg-1.jpg" />
     <Content Include="img\bg-13.png" />
+    <Content Include="img\blogs_im\baggage_blg.jpg" />
+    <Content Include="img\blogs_im\base_wardrobe_blg.jpg" />
+    <Content Include="img\blogs_im\belaya_rubashka_blg.jpg" />
+    <Content Include="img\blogs_im\black_friday_blg.jpg" />
+    <Content Include="img\blogs_im\bomber_blg.jpg" />
+    <Content Include="img\blogs_im\casual_style_blg.jpg" />
+    <Content Include="img\blogs_im\coco_shanel_blg.jpg" />
+    <Content Include="img\blogs_im\dramma_style_blg.jpg" />
+    <Content Include="img\blogs_im\galstuk_blg.jpg" />
+    <Content Include="img\blogs_im\genstvenniy_style_blg.jpg" />
+    <Content Include="img\blogs_im\kristobal_balensiata_blg.jpg" />
+    <Content Include="img\blogs_im\men_shoes_blg.jpg" />
+    <Content Include="img\blogs_im\military_style_blg.jpg" />
+    <Content Include="img\blogs_im\nechego_nadet_blg.jpg" />
+    <Content Include="img\blogs_im\nemodno_blg.jpg" />
+    <Content Include="img\blogs_im\never_stilist_blg.jpg" />
+    <Content Include="img\blogs_im\otkuda_trendi_blg.jpg" />
+    <Content Include="img\blogs_im\remen_blg.jpg" />
+    <Content Include="img\blogs_im\retro_style_blg.jpg" />
+    <Content Include="img\blogs_im\romantic_style_blg.jpg" />
+    <Content Include="img\blogs_im\safari_style_blg.jpg" />
+    <Content Include="img\blogs_im\serials_abbatstvo_blg.jpg" />
+    <Content Include="img\blogs_im\service_stilist_blg.jpg" />
+    <Content Include="img\blogs_im\style_grange_blg.jpg" />
+    <Content Include="img\blogs_im\stylist_photosession_blg.jpg" />
+    <Content Include="img\blogs_im\trend_scin_blg.jpg" />
+    <Content Include="img\blogs_im\zamena_jeans_blg.jpg" />
     <Content Include="img\bomber_1.jpg" />
     <Content Include="img\bomber_2.jpg" />
     <Content Include="img\bomber_3.jpg" />
@@ -445,7 +471,7 @@
     <Content Include="thumb\travel_bagage_6.jpg" />
     <Content Include="thumb\travel_bagage_7.jpg" />
     <Content Include="thumb\travel_bagage_8.jpg" />
-    <Content Include="Views\Home\TEST.cshtml" />
+    <Content Include="Views\Home\Comments_part.cshtml" />
     <None Include="Views\Home\Sitemap.cshtml" />
     <Content Include="whichapplication.ico" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
