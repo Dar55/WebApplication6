@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Data.SqlClient;
+using System.Collections.ObjectModel;
 
 namespace WebApplication6.Models
 {
@@ -16,6 +18,5 @@ namespace WebApplication6.Models
         [Required(ErrorMessage = "Введите,пожалуйста, номер телефона")]
         public string Phone { get; set; }
         public string Texts { get; set; }
-
     }
 }

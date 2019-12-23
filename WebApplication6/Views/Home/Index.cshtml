@@ -234,7 +234,7 @@
         <p class="forms">@Html.TextBoxFor(x => x.Phone, new { @Value = "Ваш номер телефона", @onclick = "this.value='';" })</p>
 
         <p class="forms">@Html.TextAreaFor(x => x.Texts, 8, 50, new { @placeholder = "Дополнительная информация", @class = "Texts" })</p><br />
-        <input type="submit" class="Texts" value="Отправить" />
+        <input type="submit" class="Texts" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" value="Отправить" />
 }
         </div>
 
@@ -270,7 +270,7 @@
                 <p class="forms">@Html.TextBoxFor(x => x.Phone, new { @Value = "Ваш номер телефона", @onclick = "this.value='';" })</p>
 
                 <p class="forms">@Html.TextAreaFor(x => x.Texts, 8, 50, new { @placeholder = "Дополнительная информация", @class="Texts" })</p><br />
-                <input type="submit" class="Texts" value="Отправить" />
+                <input type="submit" class="Texts" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" value="Отправить" />
             }
             </div>
 

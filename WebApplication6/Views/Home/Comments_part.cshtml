@@ -1,42 +1,26 @@
-﻿@model IEnumerable<WebApplication6.Models.Article>
-<div class="blogus">
-    @{int i = 0;}
-    @foreach (var item in Model)
+﻿@model IEnumerable<WebApplication6.Models.Comments>
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="media-block">
+            @foreach (var item in Model)
     {
-        i++;
-        if (((i - 1) % 3) == 0)
-        {
-            @:
-        </div><div class="blogus">
-            }
-            <article class="c-card__wrapper" style="background-image: url(@Html.Raw(item.MyImg))">
-                <div class="c-card__header">
-                    <!-- begin c-date -->
-                    <div class="c-date">
-                        <span>@Html.Raw(item.MyDate)</span>
-                    </div>
-                    <!-- end c-date -->
-                    <!-- begin c-info -->
-                    <ul class="c-info">
-                        <li><a href="#" class="far fa-bookmark"></a></li>
-                        <li><a href="#" class="far fa-heart"><span></span></a></li>
-                        <li><a href="#" class="far fa-comment"><span></span></a></li>
-                    </ul>
+        <a class="media-left" href="#"><img class="img-circle img-sm" alt="Профиль пользователя" src="http://bootstraptema.ru/snippets/icons/2016/mia/1.png"></a>
+        <div class="media-body">
+            <div class="mar-btm">
+                <a href="#" class="btn-link text-semibold media-heading box-inline">@Html.Raw(item.User) </a>
+                <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - 19-06-2016</p>
+            </div>
+            <p>>@Html.Raw(item.Comment)</p>
+            <div class="pad-ver">
+                <div class="btn-group">
+                    <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
                 </div>
-                <!-- end c-info -->
-                <div class="c-card__body">
-                    <div class="c-card__content">
-                        <h3 class="c-card__title">
-                            <a href="@item.MyAction">@Html.Raw(item.MyName)</a>
-                        </h3>
-                        <div class="c-card__desc">
-                            @Html.Raw(item.MyHtml)
-                        </div>
-                        <a href="@item.MyAction" class="c-card__more">Подробнее</a>
-                    </div>
-                </div>
-            </article>
-
-
-            }
+                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Ответить</a>
+            </div>
         </div>
+}
+        </div>
+    </div>
+</div>

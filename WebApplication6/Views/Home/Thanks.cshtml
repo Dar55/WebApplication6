@@ -9,17 +9,19 @@
                     try
                     {
                         if (Model.Name is null) { Model.Name = "не заполнено"; }
-                        if (Model.Name is null) { Model.Email = "не заполнено"; }
-                        if (Model.Name is null) { Model.Phone = "не заполнено"; }
+                        if (Model.Email is null) { Model.Email = "не заполнено"; }
+                        if (Model.Phone is null) { Model.Phone = "не заполнено"; }
                         WebMail.SmtpServer = "makestyles.ru";
                         WebMail.SmtpPort = 25;
                         WebMail.EnableSsl = false;
                         WebMail.UserName = "info@makestyles.ru";
                         WebMail.Password = "a_eB45s3";
                         WebMail.From = "info@makestyles.ru";
-                        WebMail.Send("dar55@yandex.ru", "RSVP Notification",
-                        "Имя Клиента:  " + Model.Name + "                  Email:  " + Model.Email + "         Номер телефона:" + Model.Phone
-                        );
+                        WebMail.Send("dar55@yandex.ru", "RSVP Notification", "Добавлена новая заявка");
+
+                      //  "Имя Клиента:  " + Model.Name + "                  Email:  " + Model.Email + "         Номер телефона:" + Model.Phone
+
+
                     }
                     catch (Exception)
                     {

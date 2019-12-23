@@ -47,7 +47,7 @@
         <p>Номер телефона:<br />@Html.TextBoxFor(x => x.Phone)</p>
 
 <br /><br /><br />
-        <input type="submit" value="Отправить" />
+        <input type="submit" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" value="Отправить" />
 }
             </article>
         </div>
