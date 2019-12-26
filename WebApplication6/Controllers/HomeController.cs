@@ -100,7 +100,7 @@ namespace WebApplication6.Controllers
         {
             int page = id ?? 0;
 
-            return View(GetCommentsPage(0));
+            return View(GetCommentsPage(0, 8));
         }
         public HomeController()
         {
@@ -126,20 +126,20 @@ namespace WebApplication6.Controllers
             return articles.OrderByDescending(t => t.MyId).Skip(itemsToSkip).
                 Take(pageSize).ToList();
         }
-        private List<Comments> GetCommentsPage(int page = 1)
+        private List<Comments> GetCommentsPage(int page = 1, int idArticle = 1)
         {
             string connectionString = "Data Source=wpl23.hosting.reg.ru;Initial Catalog=u0825580_12;User Id = u0825580_hos; Password = F#edj106";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connection;
-            cmd.CommandText = "Select * from [comments] where id =1 order by dates desc ";
+            cmd.CommandText = "Select * from [comments] where id =" + idArticle + " order by [ID_comment] desc ";
             SqlDataReader rdr = cmd.ExecuteReader();
             comments = new List<Comments>();
             while (rdr.Read())
             {
                 comments.Add(
-                     new Comments { Id = Convert.ToInt32(rdr["id"].ToString()), Comment = rdr["Comment"].ToString(), User = rdr["User"].ToString(), Dates = rdr["Dates"].ToString(), Gender = rdr["Gender"].ToString(), Like = rdr["Like"].ToString() });
+                     new Comments { Id = Convert.ToInt32(rdr["id"].ToString()), Comment = rdr["Comment"].ToString(), User = rdr["User"].ToString(), Dates = rdr["Dates"].ToString(), IdComment = rdr["ID_comment"].ToString(), Like = rdr["Like"].ToString(), Gender = "/img/icons/" + rdr["Gender"].ToString() + ".png" });
             }
 
             var itemsToSkip = page * pageSize;
@@ -147,15 +147,6 @@ namespace WebApplication6.Controllers
                 Take(pageSize).ToList();
         }
 
-
-        private void AddComments(int page = 1)
-        {
-            string connectionString = "Data Source=wpl23.hosting.reg.ru;Initial Catalog=u0825580_12;User Id = u0825580_hos; Password = F#edj106";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            string sql = "INSERT Товары (КодТовара, НаименованиеТовара, Цена) VALUES (@КодТовара, @НаименованиеТовара, @Цена)";
-            SqlCommand cmd_SQL = new SqlCommand(sql, connection);
-        }
         public ActionResult Travel_Bagage()
         {
             return View();
@@ -207,11 +198,19 @@ namespace WebApplication6.Controllers
         {
             return View();
         }
+        public ActionResult Antinorma()
+        {
+            return View();
+        }
         public ActionResult Black_Friday()
         {
             return View();
         }
         public ActionResult Read_Coco()
+        {
+            return View();
+        }
+        public ActionResult Online_shopping()
         {
             return View();
         }
@@ -295,37 +294,71 @@ namespace WebApplication6.Controllers
                 return View();
             }
         }
-        public ActionResult DbAddComments()
-        {
-            string connectionString = "Data Source=wpl23.hosting.reg.ru;Initial Catalog=u0825580_12;User Id = u0825580_hos; Password = F#edj106";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = connection;
-            comments = new List<Comments>();
-            //cmd.CommandText = "INSERT INTO [comments] ([id],[Comment],[Dates],[User])  VALUES('" + 1 +"','" + rdr["Comment"].ToString() + "', '" + rdr["User"].ToString() + "', GETDATE ( )')";
-            //cmd.CommandText = "INSERT INTO [Orders] ([Name],[Email],[Phone],[Dates],[Texts])  VALUES('" + +"','" + Email + "', '" + Phone + "', GETDATE ( ), '" + Texts + "')";
-            cmd.ExecuteNonQueryAsync();
-            return View();
-        }
-
-
         [HttpPost]
-        public void Article_gilet(Comments Comments)
+        public ActionResult Article_gilet()
         {
+            return View("", DbAddComments());
+        }
+        public string DbAddComments()
+        {
+            string lik;
+            string id = "0";
+            if (Request.Browser.IsMobileDevice)
+            {
+                lik = "mobile";
+            }
+            else
+            {
+                lik = "globe";
+            }
+            string action = Request.Url.AbsolutePath.Replace("/Home/", "");
+
             string user = Request.Form["User"];
             string comment = Request.Form["Comment"];
-            // TODO: Email response to the party organizer
-            string connectionString = "Data Source=wpl23.hosting.reg.ru;Initial Catalog=u0825580_12;User Id = u0825580_hos; Password = F#edj106";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = connection;
-            cmd.CommandText = "INSERT INTO[Comments] ([Id],[Comment],[User],[Dates],[Gender]) VALUES(1, '"+ comment + "', '" + user + "', GETDATE(), 'Ge')";
-            cmd.ExecuteNonQuery();
+            string dzen = Request.Form["dzen"];
+            Random rnd = new Random();
+            int value;
+            if (dzen == "muz")
+            {
+                value = rnd.Next(1, 5);
+            }
+            else
+            {
+                value = rnd.Next(7, 12);
+            }
+            if (user != "" && comment != "")
+            {
+                // TODO: Email response to the party organizer
+                string connectionString = "Data Source=wpl23.hosting.reg.ru;Initial Catalog=u0825580_12;User Id = u0825580_hos; Password = F#edj106";
+                SqlConnection connection = new SqlConnection(connectionString);
+                SqlConnection connection1 = new SqlConnection(connectionString);
+                connection.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = "Select id from [dbo].[table_content] where action_code='" + action + "'";
+                cmd.Connection = connection;
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    id = rdr["id"].ToString();
+                }
+                rdr.Close();
+                //cmd.Connection = connection;
+                cmd.CommandText = "INSERT INTO[Comments] ([Id],[Comment],[User],[Dates],[Like],[ID_comment], Gender)" +
+                    " VALUES((Select id from [dbo].[table_content] where action_code='" + action + "'), '" +
+                    comment + "', '" + user + "', GETDATE(), '" + lik + "'," + "(select isnull(max([ID_comment]),0)+1 FROM COMMENTS WHERE id=(Select id from[dbo].[table_content] where action_code = '" + action + "'))," + value + ")";
+
+                cmd.ExecuteNonQuery();
+
+            }
             Response.Redirect(Request.RawUrl);
+            return "";
         }
     }
 }
+
+
+
+
 
 

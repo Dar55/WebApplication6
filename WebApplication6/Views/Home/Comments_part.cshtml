@@ -5,19 +5,16 @@
         <div class="media-block">
             @foreach (var item in Model)
     {
-        <a class="media-left" href="#"><img class="img-circle img-sm" alt="Профиль пользователя" src="http://bootstraptema.ru/snippets/icons/2016/mia/1.png"></a>
+            <a class="media-left" href="#">
+                <img class="img-circle img-sm" alt="Профиль пользователя" src=@Html.Raw(item.Gender)>
+            </a>
         <div class="media-body">
             <div class="mar-btm">
                 <a href="#" class="btn-link text-semibold media-heading box-inline">@Html.Raw(item.User) </a>
-                <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - 19-06-2016</p>
+                <p class="text-muted text-sm"><i class="fa fa-@Html.Raw(item.Like) fa-lg"></i> - @Html.Raw(item.Dates)</p>
             </div>
-            <p>>@Html.Raw(item.Comment)</p>
+            <p>@Html.Raw(item.Comment)</p>
             <div class="pad-ver">
-                <div class="btn-group">
-                    <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
-                    <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
-                </div>
-                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Ответить</a>
             </div>
         </div>
 }
