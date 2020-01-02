@@ -12,7 +12,7 @@
             </header>
             <h2>РЕКОМЕНДУЮ К ПРОЧТЕНИЮ</h2>
             <p>
-                <i><time  datetime="2019-10-25">Дата публикации: 25 октября 2019</time></i>
+                <i><time datetime="2019-10-25">Дата публикации: 25 октября 2019</time></i>
             </p>
             <p>
             <p>
@@ -25,7 +25,29 @@
                 Кстати, эта книга мотивирует значительно лучше, чем многие книги по мотивации 😀: 🖋️Если вы хотите иметь то, что никогда не имели, вам придётся делать то, что никогда не делали. 🖋️Все в наших руках, поэтому их нельзя опускать. 🖋️Завистников нет только у ничтожеств. Лучше иметь первых, чем быть вторыми. <br>
                 В комментариях можно делиться мнениями, если читали эти книги, или рекомендациями к прочтению 😀
             </p>
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
         </article>
     </main>
 

@@ -10,7 +10,7 @@
             </div>
             <h2>ОПАСНОЕ ВРЕМЯ ГОДА!</h2>
             <p>
-                <i><time  datetime="2019-11-18">Дата публикации: 18 ноября 2019</time></i>
+                <i><time datetime="2019-11-18">Дата публикации: 18 ноября 2019</time></i>
             </p>
             <p>
             <p>
@@ -30,7 +30,29 @@
             </ol>
             <p>А если в магазине на вас набросились какая-то вещь и с глазами котика из "Шрека" просит забрать её с собой - не поддавайтесь сразу: подумайте в какие (как минимум) 3 разноплановых комплекта вы можете вписать эту вещь. Придумали? Тогда можно брать!</p>
             <p>А если вам сложно понять, какие вещи в вашем гардеробе стоит оставить, а какие выкинуть, то я могу помочь.</p>
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
         </article>
     </main>
 

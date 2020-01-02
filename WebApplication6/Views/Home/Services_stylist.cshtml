@@ -12,7 +12,7 @@
             </header>
             <h2>УСЛУГИ СТИЛИСТА</h2>
             <p>
-                <i><time  datetime="2019-07-17">Дата публикации: 17 июля 2019</time></i>
+                <i><time datetime="2019-07-17">Дата публикации: 17 июля 2019</time></i>
             </p>
             <p>
             <p><p>Сегодня поговорим о том, какие услуги оказывает стилист:</p>
@@ -25,7 +25,29 @@
                 <li>Абонентское обслуживание – для тех клиентов, кто прошел ревизию гардероба. За фиксированную плату клиент может присылать определенное количество фотографий вещей с вопросом стоит ли их купить или нет.</li>
                 <li>Стилизация фотосессий.</li>
             </ol></p>
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
         </article>
     </main>
 

@@ -45,7 +45,7 @@
             </header>
             <h2>СЕРИАЛЫ О МОДЕ</h2>
             <p>
-                <i><time  datetime="2019-12-10">Дата публикации: 10 декабря 2019</time></i>
+                <i><time datetime="2019-12-10">Дата публикации: 10 декабря 2019</time></i>
             </p>
             <p>
                 Я решила ввести новую рубрику, в которой буду делиться интересными фильмами, сериалами и книгами о моде и стиле.
@@ -62,11 +62,33 @@
             <p>
                 3) "Sex and the city" - культовый сериал, который, мне кажется, смотрели все. Даже не верится, что с его выхода прошло больше 20 лет 🙈 Туфли Manolo Blanik до сих пор вледеют умами модниц, а сумки Dior Saddle bag и Fendi baguette пережили вторую молодость.
                 Кстати, если решите пересмотреть сериал (или вообще открыть его для себя) обратите внимание как характер каждой из героинь отражён в их одежде.
-                <p>
+            <p>
                 Что из этого смотрели?
-</p>
+            </p>
 
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
 
         </article>
     </main>

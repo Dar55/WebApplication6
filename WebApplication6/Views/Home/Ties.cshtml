@@ -9,12 +9,12 @@
                 <div id="container">
                     <div id="img_container">
                         <div id="imgthumb_box">
-                            <a href="" class="thumblink" id="imglink1"><img src="../../thumb/tie_1.jpg"  alt=""/></a>
-                            <a href="" class="thumblink" id="imglink2"><img src="../../thumb/tie_2.jpg"  alt=""/></a>
-                            <a href="" class="thumblink" id="imglink3"><img src="../../thumb/tie_3.jpg"  alt=""/></a>
-                            <a href="" class="thumblink" id="imglink4"><img src="../../thumb/tie_4.jpg"  alt=""/></a>
-                            <a href="" class="thumblink" id="imglink5"><img src="../../thumb/tie_5.jpg"  alt=""/></a>
-                            <a href="" class="thumblink" id="imglink6"><img src="../../thumb/tie_6.jpg"  alt=""/></a>
+                            <a href="" class="thumblink" id="imglink1"><img src="../../thumb/tie_1.jpg" alt="" /></a>
+                            <a href="" class="thumblink" id="imglink2"><img src="../../thumb/tie_2.jpg" alt="" /></a>
+                            <a href="" class="thumblink" id="imglink3"><img src="../../thumb/tie_3.jpg" alt="" /></a>
+                            <a href="" class="thumblink" id="imglink4"><img src="../../thumb/tie_4.jpg" alt="" /></a>
+                            <a href="" class="thumblink" id="imglink5"><img src="../../thumb/tie_5.jpg" alt="" /></a>
+                            <a href="" class="thumblink" id="imglink6"><img src="../../thumb/tie_6.jpg" alt="" /></a>
                         </div>
                         <div id="img_box">
                             <img id="img1" src="../../img/tie_1.jpg" alt="Галстук">
@@ -50,7 +50,7 @@
             </header>
             <h2>АКСЕССУАРЫ - ГАЛСТУК</h2>
             <p>
-                <i><time  datetime="2019-12-12">Дата публикации: 10 декабря 2019</time></i>
+                <i><time datetime="2019-12-12">Дата публикации: 10 декабря 2019</time></i>
             </p>
             <p>
                 Сегодня, я расскажу про важный аксессуар, галстук.
@@ -72,16 +72,38 @@
                 Шерстяное изделие нужно выбирать под костюмы из плотных тканей, которые носят обычно в холодное время года.
                 В теплое время года – отличным выбором будет хлопковый или льняной галстук.
             </p><p>
-    Обращаю внимание, что при выборе изделий с полосой, нужно обращать особое внимание на уместность галстука.
-    При выборе аксессуара, с диагональной полосой нужно надевать рубашку однотонную.
-    При выборе галстука с поперечными или продольными полосами нужно обращать внимание на гармоничность вида в целом.
-    </p><p>
+                Обращаю внимание, что при выборе изделий с полосой, нужно обращать особое внимание на уместность галстука.
+                При выборе аксессуара, с диагональной полосой нужно надевать рубашку однотонную.
+                При выборе галстука с поперечными или продольными полосами нужно обращать внимание на гармоничность вида в целом.
+            </p><p>
                 Галстуки важный элемент стиля современного человека.
-                И хотя в России, отношение к ним неоднозначно, использование его в образе весьма желательно. 
-                Благодаря ему можно разнообразить свой вид и подчеркнуть свой уникальный стиль. 
+                И хотя в России, отношение к ним неоднозначно, использование его в образе весьма желательно.
+                Благодаря ему можно разнообразить свой вид и подчеркнуть свой уникальный стиль.
                 И да, женщинам галстук может дать свою уникальность, но это отдельная тема.
             </p>
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
         </article>
     </main>
 

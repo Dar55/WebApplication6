@@ -11,7 +11,7 @@
                 <div id="container">
                     <div id="img_container">
                         <div id="imgthumb_box">
-                            <a href="" class="thumblink" id="imglink1"><img src="../../thumb/Grange_5.jpg" alt=""/></a>
+                            <a href="" class="thumblink" id="imglink1"><img src="../../thumb/Grange_5.jpg" alt="" /></a>
                             <a href="" class="thumblink" id="imglink2"><img src="../../thumb/Grange_1.jpg" alt="" /></a>
                             <a href="" class="thumblink" id="imglink3"><img src="../../thumb/Grange_2.jpg" alt="" /></a>
                             <a href="" class="thumblink" id="imglink4"><img src="../../thumb/Grange_3.jpg" alt="" /></a>
@@ -53,7 +53,7 @@
 
             <h2>СТИЛЬ ГРАНЖ.</h2>
             <p>
-                <i><time  datetime="2019-07-18">Дата публикации: 18 июля 2019</time></i>
+                <i><time datetime="2019-07-18">Дата публикации: 18 июля 2019</time></i>
             </p>
             <p>
             <p>Продолжаем говорить о стилях и сегодня у нас на повестке дня стиль Гранж.</p>
@@ -68,7 +68,29 @@
             <p>Детали – заклепки, шипы, грубая обувь, шнуровка, сетка, массивные украшения.</p>
             <p>Ключевые вещи – шорты, рваные джинсы, косуха, футболки с надписями и портретами музыкантов, кожаные брюки, массивные ботинки, клетчатая рубашка, джинсовая куртка, цепи.</p>
             <p>Кстати, Гранж – это один из трендов сезона осень/зима 19, в сториз вдохновляемся образами с показов.</p>
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
         </article>
     </main>
 

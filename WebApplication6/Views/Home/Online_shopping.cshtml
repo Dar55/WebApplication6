@@ -7,9 +7,9 @@
         <article>
             <header>
                 <div>
-                <div>
-                    <img src="../../img/online_shopping.jpg" alt="Онлайн шоппинг">
-                </div>
+                    <div>
+                        <img src="../../img/online_shopping.jpg" alt="Онлайн шоппинг">
+                    </div>
             </header>
             <h2>ОНЛАЙН-ШОПИНГ</h2>
             <p>
@@ -33,8 +33,8 @@
             <p>
                 Можно найти уникальные вещи, которых больше ни у кого нет. Многие молодые или локальные бренды продаются только онлайн. Часто даже в привычных магазинах масс-маркета есть вещи online exclusive.
             </p>
-             <h3>Минусы</h3>   
-             <p>
+            <h3>Минусы</h3>
+            <p>
                 Нужно понимать, какие фасоны вам подходят.
             </p>
             <p>
@@ -49,7 +49,29 @@
             <p>
                 Очень интересно почитать про ваше отношение к онлайн-шопингу: практикуете или побаиваетесь?
             </p>
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
         </article>
     </main>
 

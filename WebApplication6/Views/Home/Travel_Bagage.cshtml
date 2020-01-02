@@ -10,7 +10,7 @@
                     <div id="img_container">
                         <div id="imgthumb_box">
                             <a href="" class="thumblink" id="imglink1"><img src="../../thumb/travel_bagage_1.jpg" alt="" /></a>
-                            <a href="" class="thumblink" id="imglink2"><img src="../../thumb/travel_bagage_2.jpg" alt=""/></a>
+                            <a href="" class="thumblink" id="imglink2"><img src="../../thumb/travel_bagage_2.jpg" alt="" /></a>
                             <a href="" class="thumblink" id="imglink3"><img src="../../thumb/travel_bagage_3.jpg" alt="" /></a>
                             <a href="" class="thumblink" id="imglink4"><img src="../../thumb/travel_bagage_4.jpg" alt="" /></a>
                             <a href="" class="thumblink" id="imglink5"><img src="../../thumb/travel_bagage_5.jpg" alt="" /></a>
@@ -54,7 +54,7 @@
             </header>
             <h2>НЕЗАУРЯДНО ДЛЯ ПУТЕШЕСТВИЯ</h2>
             <p>
-                <i><time  datetime="2019-11-15">Дата публикации: 15 ноября 2019</time></i>
+                <i><time datetime="2019-11-15">Дата публикации: 15 ноября 2019</time></i>
             </p>
             <p>
             <p>
@@ -81,7 +81,29 @@
                 Сумку, ремень и серьги. Также можно добавить другие аксессуары: кулоны, браслеты, платки, очки. Они занимают мало места, но сделают образ интересней.
                 В итоге, получается больше 20 вариантов комплектов, а все эти вещи поместятся в сумку размером 40 x 20 x 25 см, ещё и останется место для косметики.
             </p>
-            <p>@Html.ActionLink("Назад...", "Blogs", "Home", null, new { @class = "my-class1" })</p>
+            <form class="formaction" method="post">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <p>
+                                <input name="dzen" type="radio" value="muz" checked="checked">Муж
+                                <input name="dzen" type="radio" value="zen"> Жен
+                            </p>
+                            <br />
+                            <input class="form-control" name="User" placeholder="Ваше имя" />
+                            <textarea class="form-control" name="Comment" rows="3" placeholder="Добавьте Ваш комментарий"></textarea>
+                            <div class="mar-top clearfix">
+
+                                <button class="btn btn-sm btn-primary pull-right" OnClick="if(this.value === 'Saving...') { return false; } else { this.value = 'Saving...'; }" type="submit"> Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </form>
+
+            <div id="scrolList">
+                @Html.Partial("Comments_part")
+            </div>
         </article>
     </main>
 

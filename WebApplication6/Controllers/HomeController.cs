@@ -21,22 +21,7 @@ namespace WebApplication6.Controllers
 
             return View();
         }
-        public ActionResult Style_Retro()
-        {
-
-            return View();
-        }
-        public ActionResult Style_Female()
-        {
-
-            return View();
-        }
-        public ActionResult Style_Romantic()
-        {
-
-            return View();
-        }
-        public ActionResult About()
+       public ActionResult About()
         {
             return View();
         }
@@ -53,40 +38,6 @@ namespace WebApplication6.Controllers
             return View();
         }
 
-
-
-        public ActionResult Stylist_for_photosession()
-        {
-            return View();
-        }
-        public ActionResult Skin()
-        {
-            return View();
-        }
-        public ActionResult Dont_trust_stylist()
-        {
-            return View();
-        }
-        public ActionResult Services_stylist()
-        {
-            return View();
-        }
-        public ActionResult Grange()
-        {
-            return View();
-        }
-        public ActionResult Belt()
-        {
-            return View();
-        }
-        public ActionResult Base()
-        {
-            return View();
-        }
-        public ActionResult Style_casual()
-        {
-            return View();
-        }
         public ActionResult Blogs(int? id)
         {
             int page = id ?? 0;
@@ -101,6 +52,229 @@ namespace WebApplication6.Controllers
             int page = id ?? 0;
 
             return View(GetCommentsPage(0, 8));
+        }
+
+        public ActionResult Dramma_style(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 15));
+        }
+        public ActionResult Hystory_mode(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 14));
+        }
+        public ActionResult Shoes_men(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 13));
+        }
+        public ActionResult Read_Coco(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 12));
+        }
+        public ActionResult Black_Friday(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 11));
+        }
+        public ActionResult Travel_Bagage(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 10));
+        }
+        public ActionResult Skin(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 9));
+        }
+        public ActionResult Stylist_for_photosession(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 7));
+        }
+        public ActionResult Dont_trust_stylist(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 6));
+        }
+        public ActionResult Services_stylist(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 5));
+        }
+        public ActionResult Grange(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 4));
+        }
+        public ActionResult Style_casual(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 3));
+        }
+        public ActionResult Base(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 2));
+        }
+        public ActionResult Belt(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 1));
+        }
+        public ActionResult Bomber(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 24));
+        }
+        public ActionResult Kristoal_balensiaga(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 23));
+        }
+        public ActionResult Serials(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 22));
+        }
+        public ActionResult Shirt(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 21));
+        }
+        public ActionResult Nechego_nadet(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 20));
+        }
+        public ActionResult Change_jeans(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 19));
+        }
+        public ActionResult Ties(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 18));
+        }
+        public ActionResult Style_Military(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 17));
+        }
+        public ActionResult Style_Safari(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 16));
+        }
+        public ActionResult Style_Romantic(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 25));
+        }
+        public ActionResult Style_Retro(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 27));
+        }
+        public ActionResult Style_Female(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 26));
+        }
+        public ActionResult History_of_bikini(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 29));
+        }
+        public ActionResult Views_for_millioners(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 28));
+        }
+        public ActionResult Online_shopping(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 30));
+        }
+        public ActionResult Antinorma(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 31));
+        }
+        public ActionResult Color_winter(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 32));
+        }
+        public ActionResult Famous_Dress(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 33));
+        }
+        public ActionResult Color_Spring(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 34));
+        }
+        public ActionResult Why_Women_Kills(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 35));
+        }
+        public ActionResult Color_Summer(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 36));
+        }
+        public ActionResult Summary_2019(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 37));
+        }
+        public ActionResult Actual_Knitwear(int? id)
+        {
+            int page = id ?? 0;
+
+            return View(GetCommentsPage(0, 38));
         }
         public HomeController()
         {
@@ -147,91 +321,11 @@ namespace WebApplication6.Controllers
                 Take(pageSize).ToList();
         }
 
-        public ActionResult Travel_Bagage()
+         public ActionResult Sitemap()
         {
             return View();
         }
-        public ActionResult Style_Safari()
-        {
-            return View();
-        }
-        public ActionResult Bomber()
-        {
-            return View();
-        }
-        public ActionResult Kristoal_balensiaga()
-        {
-            return View();
-        }
-        public ActionResult Serials()
-        {
-            return View();
-        }
-        public ActionResult Change_Jeans()
-        {
-            return View();
-        }
-
-
-        public ActionResult Shirt()
-        {
-            return View();
-        }
-
-        public ActionResult Nechego_nadet()
-        {
-            return View();
-        }
-        public ActionResult Ties()
-        {
-            return View();
-        }
-        public ActionResult History_of_bikini()
-        {
-            return View();
-        }
-        public ActionResult Sitemap()
-        {
-            return View();
-        }
-        public ActionResult Style_Military()
-        {
-            return View();
-        }
-        public ActionResult Antinorma()
-        {
-            return View();
-        }
-        public ActionResult Black_Friday()
-        {
-            return View();
-        }
-        public ActionResult Read_Coco()
-        {
-            return View();
-        }
-        public ActionResult Online_shopping()
-        {
-            return View();
-        }
-        public ActionResult Hystory_mode()
-        {
-            return View();
-        }
-        public ActionResult Shoes_men()
-        {
-            return View();
-        }
-
-        public ActionResult Dramma_style()
-        {
-            return View();
-        }
-        public ActionResult Views_for_millioners()
-        {
-            return View();
-        }
-        [HttpGet]
+         [HttpGet]
         public ActionResult RsvpForm()
         {
             return View();
@@ -299,6 +393,193 @@ namespace WebApplication6.Controllers
         {
             return View("", DbAddComments());
         }
+
+        [HttpPost]
+        public ActionResult Dramma_style()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Hystory_mode()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Shoes_men()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Read_Coco()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Black_Friday()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Travel_Bagage()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Skin()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Stylist_for_photosession()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Dont_trust_stylist()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Services_stylist()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Grange()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Style_casual()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Base()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Belt()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Bomber()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Kristoal_balensiaga()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Serials()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Shirt()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Nechego_nadet()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Change_jeans()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Ties()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Style_Military()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Style_Safari()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Style_Romantic()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Style_Retro()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Style_Female()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult History_of_bikini()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Views_for_millioners()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Online_shopping()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Antinorma()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Color_winter()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Famous_Dress()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Color_Spring()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Why_Women_Kills()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Color_Summer()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Summery_2019()
+        {
+            return View("", DbAddComments());
+        }
+        [HttpPost]
+        public ActionResult Actual_Knitwear()
+        {
+            return View("", DbAddComments());
+        }
+
         public string DbAddComments()
         {
             string lik;
